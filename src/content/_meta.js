@@ -3,6 +3,7 @@ export default {
   'get-started': '',
   features: '',
   themes: '',
+  test: '',
   advanced: {
     theme: {
       copyPage: false
