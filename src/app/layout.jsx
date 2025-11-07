@@ -46,7 +46,7 @@ export default async function RootLayout({ children }) {
           navbar={navbar}
           footer={<Footer>DaziT {new Date().getFullYear()} © Quadrel</Footer>}
           editLink="Edit this page on GitHub"
-          docsRepositoryBase="https://github.com/quadrel-design/docs-ux/blob/main/src/content"
+          docsRepositoryBase="https://github.com/quadrel-design/docs-ux/blob/main/"
           sidebar={{ defaultMenuCollapseLevel: 1 }}
           pageMap={pageMap}
         >
