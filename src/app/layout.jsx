@@ -5,7 +5,7 @@ import { getPageMap } from 'nextra/page-map'
 import 'nextra-theme-docs/style.css'
 
 export const metadata = {
-  metadataBase: new URL('https://nextra.site'),
+  metadataBase: new URL('https://quadrel-design.github.io/docs-ux/'),
   title: {
     template: '%s - Nextra'
   },
@@ -20,7 +20,7 @@ export const metadata = {
     'msapplication-TileColor': '#fff'
   },
   twitter: {
-    site: 'https://nextra.site'
+    site: 'https://quadrel-design.github.io/docs-ux/'
   }
 }
 
@@ -29,8 +29,8 @@ export default async function RootLayout({ children }) {
     <Navbar
       logo={
         <div>
-          <b>Nextra</b>{' '}
-          <span style={{ opacity: '60%' }}>The Next Docs Builder</span>
+          <b>Quadrel</b>{' '}
+          <span style={{ opacity: '60%' }}>UX Guidelines</span>
         </div>
       }
       // Next.js discord server
@@ -44,9 +44,9 @@ export default async function RootLayout({ children }) {
       <body>
         <Layout
           navbar={navbar}
-          footer={<Footer>MIT {new Date().getFullYear()} © Nextra.</Footer>}
+          footer={<Footer>DaziT {new Date().getFullYear()} © Quadrel</Footer>}
           editLink="Edit this page on GitHub"
-          docsRepositoryBase="https://github.com/shuding/nextra/blob/main/examples/docs"
+          docsRepositoryBase="https://github.com/quadrel-design/docs-ux"
           sidebar={{ defaultMenuCollapseLevel: 1 }}
           pageMap={pageMap}
         >
