@@ -31,6 +31,9 @@ jobs:
         run: |
           export BASE_PATH=/docs-ux
           npm run build
+      - name: Disable Jekyll so _pagefind is served
+        run: |
+          touch out/.nojekyll
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out
