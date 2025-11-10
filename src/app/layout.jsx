@@ -7,6 +7,7 @@ import 'yet-another-react-lightbox/styles.css'
 import 'yet-another-react-lightbox/plugins/captions.css'
 import 'react-photo-album/masonry.css'
 import 'react-photo-album/rows.css'
+import 'react-photo-album/columns.css'
 
 export const metadata = {
   metadataBase: new URL('https://quadrel-design.github.io/docs-ux/'),

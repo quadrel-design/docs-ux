@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useMemo, useState } from 'react'
-import { MasonryPhotoAlbum, RowsPhotoAlbum } from 'react-photo-album'
+import { MasonryPhotoAlbum, RowsPhotoAlbum, ColumnsPhotoAlbum } from 'react-photo-album'
 import Lightbox from 'yet-another-react-lightbox'
 import Captions from 'yet-another-react-lightbox/plugins/captions'
 
@@ -9,8 +9,9 @@ export default function QuadrelMasonryGallery({
   photos = [],
   spacing = 8,
   columns,
-  uniformHeight = true,
-  targetRowHeight = 260
+  layout = 'masonry', // 'masonry' | 'rows' | 'columns'
+  targetRowHeight = 260,
+  maxWidth
 }) {
   const [index, setIndex] = useState(-1)
   const [resolvedPhotos, setResolvedPhotos] = useState([])
@@ -82,12 +83,20 @@ export default function QuadrelMasonryGallery({
   )
 
   return (
-    <>
-      {uniformHeight ? (
+    <div style={maxWidth ? { maxWidth, margin: '0 auto' } : undefined}>
+      {layout === 'rows' ? (
         <RowsPhotoAlbum
           photos={resolvedPhotos.length ? resolvedPhotos : normalizedPhotos.filter(p => p.width && p.height)}
           spacing={spacing}
           targetRowHeight={targetRowHeight}
+          onClick={({ index: i }) => setIndex(i)}
+          defaultContainerWidth={1168}
+        />
+      ) : layout === 'columns' ? (
+        <ColumnsPhotoAlbum
+          photos={resolvedPhotos.length ? resolvedPhotos : normalizedPhotos.filter(p => p.width && p.height)}
+          spacing={spacing}
+          columns={columns}
           onClick={({ index: i }) => setIndex(i)}
           defaultContainerWidth={1168}
         />
@@ -107,7 +116,7 @@ export default function QuadrelMasonryGallery({
         slides={slides}
         plugins={[Captions]}
       />
-    </>
+    </div>
   )
 }
 
