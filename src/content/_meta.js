@@ -3,6 +3,7 @@ export default {
   'get-started': '',
   features: '',
   themes: '',
+  pattern: '',
   test: '',
   advanced: {
     theme: {
