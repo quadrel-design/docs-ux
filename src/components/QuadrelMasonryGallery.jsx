@@ -73,12 +73,17 @@ export default function QuadrelMasonryGallery({
   }, [normalizedPhotos])
 
   const slides = useMemo(
-    () =>
-      (resolvedPhotos.length ? resolvedPhotos : normalizedPhotos).map(p => ({
+    () => {
+      const displayPhotos =
+        resolvedPhotos.length
+          ? resolvedPhotos
+          : normalizedPhotos.filter(p => p.width && p.height)
+      return displayPhotos.map(p => ({
         src: p.src,
         title: p.title,
         description: p.description
-      })),
+      }))
+    },
     [normalizedPhotos, resolvedPhotos]
   )
 
@@ -114,6 +119,7 @@ export default function QuadrelMasonryGallery({
         close={() => setIndex(-1)}
         index={index}
         slides={slides}
+        carousel={{ finite: true }}
         plugins={[Captions]}
       />
     </div>

@@ -30,6 +30,7 @@ export default function QuadrelLightbox({
         open={open}
         close={() => setOpen(false)}
         slides={slides}
+        carousel={{ finite: true }}
         plugins={[Captions]}
       />
     </>
