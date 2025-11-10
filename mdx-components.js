@@ -1,10 +1,10 @@
 import { useMDXComponents as getDocsMDXComponents } from 'nextra-theme-docs'
-import OneImageLightbox from './src/components/OneImageLightbox'
+import QuadrelLightbox from './src/components/QuadrelLightbox'
 
 const docsComponents = getDocsMDXComponents()
 
 export const useMDXComponents = components => ({
   ...docsComponents,
-  OneImageLightbox,
+  QuadrelLightbox,
   ...components
 })
