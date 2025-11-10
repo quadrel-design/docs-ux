@@ -7,7 +7,7 @@ import Captions from 'yet-another-react-lightbox/plugins/captions'
 
 export default function QuadrelMasonryGallery({
   photos = [],
-  spacing = 8,
+  spacing = 12,
   columns,
   layout = 'masonry', // 'masonry' | 'rows' | 'columns'
   targetRowHeight = 260,
