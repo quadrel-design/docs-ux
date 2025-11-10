@@ -9,7 +9,8 @@ export default function QuadrelLightbox({
   alt = '',
   title,
   description,
-  thumbWidth = 320
+  thumbWidth = 320,
+  thumbStyle = {}
 }) {
   const [open, setOpen] = useState(false)
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
@@ -22,7 +23,7 @@ export default function QuadrelLightbox({
         src={resolvedSrc}
         alt={alt}
         width={thumbWidth}
-        style={{ cursor: 'zoom-in', height: 'auto' }}
+        style={{ cursor: 'zoom-in', height: 'auto', ...thumbStyle }}
         onClick={() => setOpen(true)}
       />
       <Lightbox
