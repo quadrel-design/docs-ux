@@ -11,7 +11,8 @@ export default function QuadrelMasonryGallery({
   columns,
   layout = 'masonry', // 'masonry' | 'rows' | 'columns'
   targetRowHeight = 260,
-  maxWidth
+  maxWidth,
+  containerStyle
 }) {
   const [index, setIndex] = useState(-1)
   const [resolvedPhotos, setResolvedPhotos] = useState([])
@@ -88,7 +89,7 @@ export default function QuadrelMasonryGallery({
   )
 
   return (
-    <div style={maxWidth ? { maxWidth, margin: '0 auto' } : undefined}>
+    <div style={{ ...(maxWidth ? { maxWidth, margin: '0 auto' } : {}), ...(containerStyle || {}) }}>
       {layout === 'rows' ? (
         <RowsPhotoAlbum
           photos={resolvedPhotos.length ? resolvedPhotos : normalizedPhotos.filter(p => p.width && p.height)}
