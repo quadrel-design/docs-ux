@@ -8,7 +8,8 @@ import Captions from 'yet-another-react-lightbox/plugins/captions'
 export default function QuadrelMasonryGallery({
   photos = [],
   spacing = 8,
-  columns
+  columns,
+  showHeight = true
 }) {
   const [index, setIndex] = useState(-1)
   const [resolvedPhotos, setResolvedPhotos] = useState([])
@@ -87,6 +88,24 @@ export default function QuadrelMasonryGallery({
         columns={columns}
         onClick={({ index: i }) => setIndex(i)}
         defaultContainerWidth={1168}
+        renderPhoto={({ photo, imageProps, wrapperStyle }) => (
+          <div style={wrapperStyle}>
+            <img {...imageProps} />
+            {showHeight && photo?.height ? (
+              <div
+                style={{
+                  fontSize: 12,
+                  lineHeight: 1.2,
+                  color: '#666',
+                  marginTop: 4
+                }}
+              >
+                {photo.title ? `${photo.title} – ` : ''}
+                {photo.height}px
+              </div>
+            ) : null}
+          </div>
+        )}
       />
       <Lightbox
         open={index >= 0}
