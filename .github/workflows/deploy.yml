@@ -26,11 +26,24 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
+      - name: Restore Next.js cache
+        uses: actions/cache@v4
+        with:
+          path: .next/cache
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', 'next.config.*', 'mdx-components.js', 'src/**', 'public/**') }}
+          restore-keys: |
+            ${{ runner.os }}-nextjs-
       - run: npm ci
       - name: Build (static export for Pages)
         run: |
           export BASE_PATH=/docs-ux
           npm run build
+      - name: Save Next.js cache
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: .next/cache
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', 'next.config.*', 'mdx-components.js', 'src/**', 'public/**') }}
       - name: Disable Jekyll so _pagefind is served
         run: |
           touch out/.nojekyll
