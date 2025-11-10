@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useMemo, useState } from 'react'
-import { MasonryPhotoAlbum } from 'react-photo-album'
+import { MasonryPhotoAlbum, RowsPhotoAlbum } from 'react-photo-album'
 import Lightbox from 'yet-another-react-lightbox'
 import Captions from 'yet-another-react-lightbox/plugins/captions'
 
@@ -9,7 +9,8 @@ export default function QuadrelMasonryGallery({
   photos = [],
   spacing = 8,
   columns,
-  showHeight = true
+  uniformHeight = true,
+  targetRowHeight = 260
 }) {
   const [index, setIndex] = useState(-1)
   const [resolvedPhotos, setResolvedPhotos] = useState([])
@@ -82,31 +83,23 @@ export default function QuadrelMasonryGallery({
 
   return (
     <>
-      <MasonryPhotoAlbum
-        photos={resolvedPhotos.length ? resolvedPhotos : normalizedPhotos.filter(p => p.width && p.height)}
-        spacing={spacing}
-        columns={columns}
-        onClick={({ index: i }) => setIndex(i)}
-        defaultContainerWidth={1168}
-        renderPhoto={({ photo, imageProps, wrapperStyle }) => (
-          <div style={wrapperStyle}>
-            <img {...imageProps} />
-            {showHeight && photo?.height ? (
-              <div
-                style={{
-                  fontSize: 12,
-                  lineHeight: 1.2,
-                  color: '#666',
-                  marginTop: 4
-                }}
-              >
-                {photo.title ? `${photo.title} – ` : ''}
-                {photo.height}px
-              </div>
-            ) : null}
-          </div>
-        )}
-      />
+      {uniformHeight ? (
+        <RowsPhotoAlbum
+          photos={resolvedPhotos.length ? resolvedPhotos : normalizedPhotos.filter(p => p.width && p.height)}
+          spacing={spacing}
+          targetRowHeight={targetRowHeight}
+          onClick={({ index: i }) => setIndex(i)}
+          defaultContainerWidth={1168}
+        />
+      ) : (
+        <MasonryPhotoAlbum
+          photos={resolvedPhotos.length ? resolvedPhotos : normalizedPhotos.filter(p => p.width && p.height)}
+          spacing={spacing}
+          columns={columns}
+          onClick={({ index: i }) => setIndex(i)}
+          defaultContainerWidth={1168}
+        />
+      )}
       <Lightbox
         open={index >= 0}
         close={() => setIndex(-1)}
