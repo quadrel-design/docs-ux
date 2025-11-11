@@ -16,13 +16,13 @@ const inter = Inter({ subsets: ['latin'], display: 'swap' })
 export const metadata = {
   metadataBase: new URL('https://quadrel-design.github.io/docs-ux/'),
   title: {
-    template: '%s - Nextra'
+    template: '%s - Quadrel'
   },
-  description: 'Nextra: the Next.js site builder',
-  applicationName: 'Nextra',
+  description: 'Quadrel - UX Architecture Guidelines',
+  applicationName: 'Quadrel',
   generator: 'Next.js',
   appleWebApp: {
-    title: 'Nextra'
+    title: 'Quadrel'
   },
   other: {
     'msapplication-TileImage': '/ms-icon-144x144.png',
@@ -39,7 +39,7 @@ export default async function RootLayout({ children }) {
     <Navbar
     logo={
       <a href="/" style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
-        <img src={`${basePath}/assets/admin/logo.svg`} alt="Logo" height={24} style={{ height: 24, width: 'auto' }} />
+        <img src={`${basePath}/assets/admin/logo.svg`} alt="Logo" style={{ height: 24, width: 'auto' }} />
         <b>Quadrel</b><span style={{ opacity: '60%' }}> UX Guidelines</span>
       </a>
     }
