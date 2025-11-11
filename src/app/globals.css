@@ -17,3 +17,16 @@
   color: var(--x-color-primary-700);
 }
 
+/* Active item in left navigation: black background + white text */
+aside a[aria-current] {
+  background: var(--x-color-black);
+  color: var(--x-color-white) !important;
+  border-radius: 8px;
+}
+aside a[aria-current] * {
+  color: var(--x-color-white) !important;
+}
+aside a[aria-current]:hover {
+  color: var(--x-color-white) !important;
+}
+
