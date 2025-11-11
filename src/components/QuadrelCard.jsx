@@ -1,14 +1,15 @@
 'use client'
 
 export default function QuadrelCard({
-  href,
   title,
   text,
   icon,
   children,
   padding = 24,
   gap = 24,
-  style
+  style,
+  linkHref,
+  linkLabel = 'Learn more →'
 }) {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
@@ -43,15 +44,46 @@ export default function QuadrelCard({
       <div style={{ marginTop: gap }}>
         {text !== undefined ? <p>{text}</p> : children}
       </div>
+      {/* 24px gap to link */}
+      {(linkHref || typeof linkHref === 'string') && (
+        <a
+          href={linkHref.startsWith('/') ? `${basePath}${linkHref}` : linkHref}
+          style={{
+            marginTop: gap,
+            display: 'inline-block',
+            textDecoration: 'none',
+            color: 'var(--x-color-blue-700, #1d4ed8)'
+          }}
+        >
+          {linkLabel}
+        </a>
+      )}
     </div>
   )
 
-  if (href) {
-    return (
-      <a href={href} style={{ textDecoration: 'none', color: 'inherit' }}>
-        {content}
-      </a>
-    )
-  }
   return content
 }
+
+export function QuadrelCardGrid({
+  children,
+  gap = 24,
+  min = 280,
+  columns = 'auto-fit',
+  style
+}) {
+  return (
+    <div
+      style={{
+        display: 'grid',
+        gridTemplateColumns: `repeat(${columns}, minmax(${min}px, 1fr))`,
+        gap,
+        ...style
+      }}
+    >
+      {children}
+    </div>
+  )
+}
+
+// allow usage as <QuadrelCard.Grid>
+QuadrelCard.Grid = QuadrelCardGrid
