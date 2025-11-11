@@ -3,6 +3,7 @@
 export default function QuadrelCard({
   href,
   title,
+  text,
   icon,
   children,
   padding = 24,
@@ -39,7 +40,9 @@ export default function QuadrelCard({
       {/* 24px gap */}
       <h3 style={{ marginTop: gap, fontSize: '1.25rem' }}>{title}</h3>
       {/* 24px gap */}
-      <div style={{ marginTop: gap }}>{children}</div>
+      <div style={{ marginTop: gap }}>
+        {text !== undefined ? <p>{text}</p> : children}
+      </div>
     </div>
   )
 
@@ -52,5 +55,3 @@ export default function QuadrelCard({
   }
   return content
 }
-
-
