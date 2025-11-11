@@ -2,6 +2,23 @@
   --nextra-content-width: 100%;
 }
 
+/* Make the whole page span full width by removing wrapper constraints */
+.x\:max-w-\(--nextra-content-width\) {
+  max-width: none !important;
+}
+.x\:mx-auto {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+/* Remove default horizontal padding on navbar/footer wrappers */
+.nextra-navbar nav {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+footer {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
 .q-card {
   display: flex;
   flex-direction: column;
