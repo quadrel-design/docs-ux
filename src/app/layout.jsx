@@ -10,6 +10,7 @@ import 'yet-another-react-lightbox/plugins/thumbnails.css'
 import 'react-photo-album/masonry.css'
 import 'react-photo-album/rows.css'
 import 'react-photo-album/columns.css'
+import './globals.css'
 
 const inter = Inter({ subsets: ['latin'], display: 'swap' })
 
