@@ -31,3 +31,16 @@
   color: var(--x-color-white) !important;
 }
 
+/* Sidebar right border matching the header's `.nextra-border` color logic */
+.nextra-sidebar {
+  border-right: 1px solid var(--x-color-gray-200);
+}
+@media (prefers-contrast: more) {
+  .nextra-sidebar {
+    border-right-color: var(--x-color-neutral-400) !important;
+  }
+}
+:where(.dark *) .nextra-sidebar {
+  border-right-color: var(--x-color-neutral-800);
+}
+
