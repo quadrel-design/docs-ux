@@ -28,6 +28,9 @@ export default function QuadrelCard({
     <div
       style={{
         padding,
+        display: 'flex',
+        flexDirection: 'column',
+        height: '100%',
         textDecoration: 'none',
         color: 'inherit',
         borderRadius: 12,
@@ -49,6 +52,7 @@ export default function QuadrelCard({
         <a
           href={linkHref.startsWith('/') ? `${basePath}${linkHref}` : linkHref}
           className="nx-inline-block nx-text-primary-600 hover:nx-underline nx-underline-offset-2"
+          style={{ marginTop: 'auto' }}
         >
           {linkLabel}
         </a>
