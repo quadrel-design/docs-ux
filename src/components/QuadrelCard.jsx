@@ -28,6 +28,9 @@ export default function QuadrelCard({
     <div
       style={{
         padding,
+        display: 'flex',
+        flexDirection: 'column',
+        height: '100%',
         textDecoration: 'none',
         color: 'inherit',
         borderRadius: 12,
@@ -44,6 +47,8 @@ export default function QuadrelCard({
       <div style={{ marginTop: gap }}>
         {text !== undefined ? <p>{text}</p> : children}
       </div>
+      {/* spacer to push link to bottom */}
+      <div style={{ flex: '1 1 auto' }} />
       {/* 24px gap to link */}
       {(linkHref || typeof linkHref === 'string') && (
         <a
