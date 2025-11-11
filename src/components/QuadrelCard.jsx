@@ -28,9 +28,6 @@ export default function QuadrelCard({
     <div
       style={{
         padding,
-        display: 'flex',
-        flexDirection: 'column',
-        height: '100%',
         textDecoration: 'none',
         color: 'inherit',
         borderRadius: 12,
@@ -40,21 +37,18 @@ export default function QuadrelCard({
       }}
     >
       {/* icon */}
-      <div>{renderIcon()}</div>
-      {/* 24px gap */}
-      <h3 style={{ marginTop: gap, fontSize: '1.25rem' }}>{title}</h3>
-      {/* 24px gap */}
-      <div style={{ marginTop: gap }}>
+      <div style={{ marginBottom: gap }}>{renderIcon()}</div>
+      {/* 24px bottom gap */}
+      <h3 style={{ marginBottom: gap, fontSize: '1.25rem' }}>{title}</h3>
+      {/* 24px bottom gap */}
+      <div style={{ marginBottom: gap }}>
         {text !== undefined ? <p>{text}</p> : children}
       </div>
-      {/* spacer to push link to bottom */}
-      <div style={{ flex: '1 1 auto' }} />
-      {/* 24px gap to link */}
+      {/* link: no extra bottom spacer; card padding provides bottom space */}
       {(linkHref || typeof linkHref === 'string') && (
         <a
           href={linkHref.startsWith('/') ? `${basePath}${linkHref}` : linkHref}
-          className="nx-mt-6 nx-inline-block nx-text-primary-600 hover:nx-underline nx-underline-offset-2"
-          style={gap !== 24 ? { marginTop: gap } : undefined}
+          className="nx-inline-block nx-text-primary-600 hover:nx-underline nx-underline-offset-2"
         >
           {linkLabel}
         </a>
