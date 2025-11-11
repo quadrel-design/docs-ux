@@ -14,10 +14,27 @@ Vercel will create the Nextra repository and deploy the site for you with just a
 few clicks. Once done, every change in the repository will be deployed
 automatically.
 
-## Create manually
+## Create an initial Business Object
 
 Nextra works like a Next.js plugin, and it accepts a theme config (layout) to
 render the page. To start: [^3]
+
+maid
+flowchart LR
+  A([Start]) --> B[Create new business object]
+  subgraph S1 [Table]
+    B
+  end
+  B --> C[Detailseite öffnen]
+  subgraph S2 [Detailseite]
+    C --> D[Formular ausfüllen]
+    D --> E[Speichern]
+  end
+  E --> F[Zurück zur Tabelle]
+  subgraph S3 [Tabellenseite]
+    F
+  end
+  F --> G([Ende])
 
 <Steps>
 ### Create Business Object
@@ -30,7 +47,7 @@ render the page. To start: [^3]
       title="Demo-Bild"
       description="Kurzer erklärender Text zur Abbildung."
       thumbWidth={800}
-      thumbStyle={{ marginTop: 16 }}
+      thumbStyle={{ marginTop: 8 }}
       lightboxPaddingY={72}
     />
   </Tabs.Tab>
