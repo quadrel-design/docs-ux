@@ -26,7 +26,13 @@ export default function QuadrelLightbox({
         src={resolvedSrc}
         alt={alt}
         width={thumbWidth}
-        style={{ cursor: 'zoom-in', height: 'auto', ...thumbStyle }}
+        style={{
+          cursor: 'zoom-in',
+          height: 'auto',
+          border: '1px solid var(--x-color-gray-200)',
+          borderRadius: 8,
+          ...thumbStyle
+        }}
         onClick={() => setOpen(true)}
       />
       <Lightbox

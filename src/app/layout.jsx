@@ -5,6 +5,7 @@ import { getPageMap } from 'nextra/page-map'
 import 'nextra-theme-docs/style.css'
 import 'yet-another-react-lightbox/styles.css'
 import 'yet-another-react-lightbox/plugins/captions.css'
+import 'yet-another-react-lightbox/plugins/thumbnails.css'
 import 'react-photo-album/masonry.css'
 import 'react-photo-album/rows.css'
 import 'react-photo-album/columns.css'
@@ -32,12 +33,12 @@ export const metadata = {
 export default async function RootLayout({ children }) {
   const navbar = (
     <Navbar
-      logo={
-        <div>
-          <b>Quadrel</b>{' '}
-          <span style={{ opacity: '60%' }}>UX Guidelines</span>
-        </div>
-      }
+    logo={
+      <a href="/" style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+        <Image src="/assets/admin/logo.svg" alt="Logo" height={24} />
+        <b>Quadrel</b><span style={{ opacity: '60%' }}> UX Guidelines</span>
+      </a>
+    }
       // Next.js discord server
       chatLink="https://discord.gg/hEM84NMkRv"
     />

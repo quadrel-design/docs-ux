@@ -98,6 +98,11 @@ export default function QuadrelMasonryGallery({
           targetRowHeight={targetRowHeight}
           onClick={({ index: i }) => setIndex(i)}
           defaultContainerWidth={1168}
+          renderPhoto={({ imageProps, wrapperStyle }) => (
+            <div style={{ ...wrapperStyle, border: '1px solid var(--x-color-gray-200)', borderRadius: 8, overflow: 'hidden' }}>
+              <img {...imageProps} style={{ ...imageProps.style, display: 'block' }} />
+            </div>
+          )}
         />
       ) : layout === 'columns' ? (
         <ColumnsPhotoAlbum
@@ -106,6 +111,11 @@ export default function QuadrelMasonryGallery({
           columns={columns}
           onClick={({ index: i }) => setIndex(i)}
           defaultContainerWidth={1168}
+          renderPhoto={({ imageProps, wrapperStyle }) => (
+            <div style={{ ...wrapperStyle, border: '1px solid var(--x-color-gray-200)', borderRadius: 8, overflow: 'hidden' }}>
+              <img {...imageProps} style={{ ...imageProps.style, display: 'block' }} />
+            </div>
+          )}
         />
       ) : (
         <MasonryPhotoAlbum
@@ -114,6 +124,11 @@ export default function QuadrelMasonryGallery({
           columns={columns}
           onClick={({ index: i }) => setIndex(i)}
           defaultContainerWidth={1168}
+          renderPhoto={({ imageProps, wrapperStyle }) => (
+            <div style={{ ...wrapperStyle, border: '1px solid var(--x-color-gray-200)', borderRadius: 8, overflow: 'hidden' }}>
+              <img {...imageProps} style={{ ...imageProps.style, display: 'block' }} />
+            </div>
+          )}
         />
       )}
       <Lightbox
