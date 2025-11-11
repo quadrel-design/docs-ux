@@ -49,7 +49,7 @@ export default function QuadrelCard({
       {(linkHref || typeof linkHref === 'string') && (
         <a
           href={linkHref.startsWith('/') ? `${basePath}${linkHref}` : linkHref}
-          className="q-link"
+          className="x:focus-visible:nextra-focus x:text-primary-600 x:underline x:hover:no-underline x:decoration-from-font x:[text-underline-position:from-font]"
           style={{ marginTop: 'auto' }}
         >
           {linkLabel}
