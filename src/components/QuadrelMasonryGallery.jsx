@@ -137,6 +137,7 @@ export default function QuadrelMasonryGallery({
         index={index}
         slides={slides}
         carousel={{ finite: true }}
+        thumbnails={{ hidden: true }}
         styles={{
           container: {
             paddingTop: lightboxPaddingY,
