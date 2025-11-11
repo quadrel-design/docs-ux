@@ -39,17 +39,7 @@
 }
 
 /* Active parent folder (button) also black */
-.nextra-sidebar li.active > button {
-  background: var(--x-color-black) !important;
-  color: var(--x-color-white) !important;
-  border-radius: 8px;
-}
-.nextra-sidebar li.active > button * {
-  color: var(--x-color-white) !important;
-}
-.nextra-sidebar li.active > button:hover {
-  color: var(--x-color-white) !important;
-}
+ 
 /* Sidebar right border matching the header's `.nextra-border` color logic */
 .nextra-sidebar {
   border-right: 1px solid var(--x-color-gray-200);
