@@ -39,14 +39,8 @@ export default function QuadrelLightbox({
         open={open}
         close={() => setOpen(false)}
         slides={slides}
-        carousel={{ finite: true }}
+        carousel={{ finite: true, padding: `${lightboxPaddingY}px` }}
         thumbnails={{ hidden: true }}
-        styles={{
-          container: {
-            paddingTop: lightboxPaddingY,
-            paddingBottom: lightboxPaddingY
-          }
-        }}
         plugins={[Captions, Thumbnails]}
       />
     </>
