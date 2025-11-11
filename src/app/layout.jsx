@@ -2,7 +2,6 @@
 import { Footer, Layout, Navbar } from 'nextra-theme-docs'
 import { Head } from 'nextra/components'
 import { getPageMap } from 'nextra/page-map'
-import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import 'nextra-theme-docs/style.css'
 import 'yet-another-react-lightbox/styles.css'
@@ -39,7 +38,7 @@ export default async function RootLayout({ children }) {
     <Navbar
     logo={
       <a href="/" style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
-        <Image src="/assets/admin/logo.svg" alt="Logo" height={24} />
+        <img src="/assets/admin/logo.svg" alt="Logo" height={24} />
         <b>Quadrel</b><span style={{ opacity: '60%' }}> UX Guidelines</span>
       </a>
     }
