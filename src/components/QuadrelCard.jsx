@@ -53,12 +53,8 @@ export default function QuadrelCard({
       {(linkHref || typeof linkHref === 'string') && (
         <a
           href={linkHref.startsWith('/') ? `${basePath}${linkHref}` : linkHref}
-          style={{
-            marginTop: gap,
-            display: 'inline-block',
-            textDecoration: 'none',
-            color: 'var(--x-color-blue-700, #1d4ed8)'
-          }}
+          className="nx-mt-6 nx-inline-block nx-text-primary-600 hover:nx-underline nx-underline-offset-2"
+          style={gap !== 24 ? { marginTop: gap } : undefined}
         >
           {linkLabel}
         </a>
@@ -72,7 +68,7 @@ export default function QuadrelCard({
 export function QuadrelCardGrid({
   children,
   gap = 24,
-  min = 280,
+  min = 220,
   columns = 'auto-fit',
   style
 }) {
