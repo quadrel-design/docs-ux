@@ -19,22 +19,23 @@ automatically.
 Nextra works like a Next.js plugin, and it accepts a theme config (layout) to
 render the page. To start: [^3]
 
-maid
-flowchart LR
-  A([Start]) --> B[Create new business object]
-  subgraph S1 [Table]
-    B
+```mermaid
+graph TD
+  subgraph Tabelle [Tabellenseite]
+    A[Neu klicken] --> B[Detailseite öffnen]
   end
-  B --> C[Detailseite öffnen]
-  subgraph S2 [Detailseite]
-    C --> D[Formular ausfüllen]
-    D --> E[Speichern]
+
+  subgraph Detail [Detailseite]
+    B --> C[Formular ausfüllen]
+    C --> D[Speichern]
   end
-  E --> F[Zurück zur Tabelle]
-  subgraph S3 [Tabellenseite]
-    F
+
+  D --> E[Zurück zur Tabelle]
+
+  subgraph Tabelle2 [Tabellenseite]
+    E
   end
-  F --> G([Ende])
+```
 
 <Steps>
 ### Create Business Object
