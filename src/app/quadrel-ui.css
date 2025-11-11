@@ -17,8 +17,16 @@
   border-radius: 8px;
 }
 
+/* Ensure gallery items show a visible border even if images don't fill container */
+.react-photo-album--photo {
+  border: 1px solid var(--x-color-gray-200);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
 :where(.dark *) .quadrel-thumb,
-:where(.dark *) .react-photo-album--image {
+:where(.dark *) .react-photo-album--image,
+:where(.dark *) .react-photo-album--photo {
   border-color: var(--x-color-neutral-800);
 }
 
