@@ -12,8 +12,8 @@
 }
 /* Remove default horizontal padding on navbar/footer wrappers */
 .nextra-navbar nav {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
 }
 footer {
   padding-left: 0 !important;
