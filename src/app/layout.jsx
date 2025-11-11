@@ -34,11 +34,12 @@ export const metadata = {
 }
 
 export default async function RootLayout({ children }) {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
   const navbar = (
     <Navbar
     logo={
       <a href="/" style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
-        <img src="/assets/admin/logo.svg" alt="Logo" height={24} />
+        <img src={`${basePath}/assets/admin/logo.svg`} alt="Logo" height={24} style={{ height: 24, width: 'auto' }} />
         <b>Quadrel</b><span style={{ opacity: '60%' }}> UX Guidelines</span>
       </a>
     }
