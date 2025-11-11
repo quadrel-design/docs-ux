@@ -8,3 +8,12 @@
   height: 100%;
 }
 
+.q-link {
+  color: var(--x-color-primary-600);
+  text-decoration: underline;
+  transition: color var(--x-default-transition-duration, 200ms) var(--x-default-transition-timing-function, ease);
+}
+.q-link:hover {
+  color: var(--x-color-primary-700);
+}
+
