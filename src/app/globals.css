@@ -38,7 +38,7 @@
   color: var(--x-color-white) !important;
 }
 
-/* Also style active folder (button) entries */
+/* Active parent folder (button) also black */
 .nextra-sidebar li.active > button {
   background: var(--x-color-black) !important;
   color: var(--x-color-white) !important;
