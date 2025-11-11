@@ -27,6 +27,7 @@ jobs:
           node-version: '20'
           cache: 'npm'
       - name: Restore Next.js cache
+        id: next_cache
         uses: actions/cache@v4
         with:
           path: .next/cache
@@ -34,6 +35,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nextjs-
       - name: Restore Pagefind cache
+        id: pf_cache
         uses: actions/cache@v4
         with:
           path: public/_pagefind
@@ -46,17 +48,17 @@ jobs:
           export BASE_PATH=/docs-ux
           npm run build
       - name: Save Next.js cache
-        if: always()
+        if: success() && steps.next_cache.outputs.cache-hit != 'true'
         uses: actions/cache/save@v4
         with:
           path: .next/cache
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', 'next.config.*', 'mdx-components.js', 'src/**', 'public/**') }}
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', 'next.config.*', 'mdx-components.js', 'src/**', 'public/**') }}-${{ github.run_id }}
       - name: Save Pagefind cache
-        if: always()
+        if: success() && steps.pf_cache.outputs.cache-hit != 'true'
         uses: actions/cache/save@v4
         with:
           path: public/_pagefind
-          key: ${{ runner.os }}-pagefind-${{ hashFiles('**/package-lock.json', 'next.config.*', 'mdx-components.js', 'src/**', 'public/**') }}
+          key: ${{ runner.os }}-pagefind-${{ hashFiles('**/package-lock.json', 'next.config.*', 'mdx-components.js', 'src/**', 'public/**') }}-${{ github.run_id }}
       - name: Disable Jekyll so _pagefind is served
         run: |
           touch out/.nojekyll
