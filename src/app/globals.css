@@ -1,5 +1,10 @@
 :root {
-  --nextra-content-width: 1600px;
+  --nextra-content-width: 1800px;
 }
 
+.q-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 
