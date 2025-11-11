@@ -1,0 +1,13 @@
+/* Lightbox thumbnail strip border to match Nextra defaults */
+.yarl__thumbnails_thumbnail {
+  border: 1px solid var(--x-color-gray-200);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* Dark theme border color */
+:where(.dark *) .yarl__thumbnails_thumbnail {
+  border-color: var(--x-color-neutral-800);
+}
+
+
