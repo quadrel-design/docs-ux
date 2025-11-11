@@ -12,7 +12,8 @@ export default function QuadrelMasonryGallery({
   layout = 'masonry', // 'masonry' | 'rows' | 'columns'
   targetRowHeight = 260,
   maxWidth,
-  containerStyle
+  containerStyle,
+  lightboxPaddingY = 48
 }) {
   const [index, setIndex] = useState(-1)
   const [resolvedPhotos, setResolvedPhotos] = useState([])
@@ -121,6 +122,12 @@ export default function QuadrelMasonryGallery({
         index={index}
         slides={slides}
         carousel={{ finite: true }}
+        styles={{
+          container: {
+            paddingTop: lightboxPaddingY,
+            paddingBottom: lightboxPaddingY
+          }
+        }}
         plugins={[Captions]}
       />
     </div>

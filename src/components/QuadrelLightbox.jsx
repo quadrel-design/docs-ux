@@ -10,7 +10,8 @@ export default function QuadrelLightbox({
   title,
   description,
   thumbWidth = 320,
-  thumbStyle = {}
+  thumbStyle = {},
+  lightboxPaddingY = 48
 }) {
   const [open, setOpen] = useState(false)
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
@@ -31,6 +32,12 @@ export default function QuadrelLightbox({
         close={() => setOpen(false)}
         slides={slides}
         carousel={{ finite: true }}
+        styles={{
+          container: {
+            paddingTop: lightboxPaddingY,
+            paddingBottom: lightboxPaddingY
+          }
+        }}
         plugins={[Captions]}
       />
     </>
