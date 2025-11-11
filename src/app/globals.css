@@ -18,15 +18,16 @@
 }
 
 /* Active item in left navigation: black background + white text */
-aside a[aria-current] {
-  background: var(--x-color-black);
+/* Sidebar (left) uses li.active > a for current item */
+.nextra-sidebar li.active > a {
+  background: var(--x-color-black) !important;
   color: var(--x-color-white) !important;
   border-radius: 8px;
 }
-aside a[aria-current] * {
+.nextra-sidebar li.active > a * {
   color: var(--x-color-white) !important;
 }
-aside a[aria-current]:hover {
+.nextra-sidebar li.active > a:hover {
   color: var(--x-color-white) !important;
 }
 
