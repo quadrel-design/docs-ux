@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Lightbox from 'yet-another-react-lightbox'
 import Captions from 'yet-another-react-lightbox/plugins/captions'
+import Thumbnails from 'yet-another-react-lightbox/plugins/thumbnails'
 
 export default function QuadrelLightbox({
   src,
@@ -21,6 +22,7 @@ export default function QuadrelLightbox({
   return (
     <>
       <img
+        className="quadrel-thumb"
         src={resolvedSrc}
         alt={alt}
         width={thumbWidth}
@@ -38,7 +40,7 @@ export default function QuadrelLightbox({
             paddingBottom: lightboxPaddingY
           }
         }}
-        plugins={[Captions]}
+        plugins={[Captions, Thumbnails]}
       />
     </>
   )

@@ -10,4 +10,16 @@
   border-color: var(--x-color-neutral-800);
 }
 
+/* Default page thumbnails */
+.quadrel-thumb,
+.react-photo-album--image {
+  border: 1px solid var(--x-color-gray-200);
+  border-radius: 8px;
+}
+
+:where(.dark *) .quadrel-thumb,
+:where(.dark *) .react-photo-album--image {
+  border-color: var(--x-color-neutral-800);
+}
+
 
