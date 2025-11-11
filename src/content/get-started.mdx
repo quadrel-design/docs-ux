@@ -1,5 +1,5 @@
 import { Steps } from 'nextra/components'
-import { Tabs, Tab } from 'nextra/components'
+import { Tabs } from 'nextra/components'
 
 # Get Started
 
@@ -23,7 +23,7 @@ render the page. To start: [^3]
 ### Create Business Object
 
 <Tabs items={['Preview', 'Description', 'Links']}>
-  <Tab>
+  <Tabs.Tab>
     <QuadrelLightbox
       src="/assets/test/Shell.png"
       alt="Demo image"
@@ -33,9 +33,9 @@ render the page. To start: [^3]
       thumbStyle={{ marginTop: 16 }}
       lightboxPaddingY={72}
     />
-  </Tab>
-  <Tab>Some description</Tab>
-  <Tab>wefgqewfqweq ew qew rqew</Tab>
+  </Tabs.Tab>
+  <Tabs.Tab>Some description</Tabs.Tab>
+  <Tabs.Tab>wefgqewfqweq ew qew rqew</Tabs.Tab>
 </Tabs>
 
 ### Install the docs theme [^2]
