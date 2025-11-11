@@ -6,6 +6,13 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+  transition: box-shadow var(--x-default-transition-duration, 200ms) var(--x-default-transition-timing-function, ease);
+  will-change: box-shadow;
+}
+
+.q-card:hover {
+  /* Shadow only; no margin/padding/border changes to avoid reflow */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 }
 
 .q-link {
