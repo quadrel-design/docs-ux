@@ -1,4 +1,5 @@
 export default {
   index: 'Overview',
-  create: 'Create' // normal doc entry
+  // expose a single link in sidebar, not a folder
+  create: { title: 'Create', href: '/floorplans/create' }
 }
