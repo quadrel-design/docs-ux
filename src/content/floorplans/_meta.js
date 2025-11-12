@@ -1,4 +1,4 @@
 export default {
-  index: 'Overview' ,
-
+  index: 'Overview',
+  create: { title: 'Create', type: 'page' }
 }
