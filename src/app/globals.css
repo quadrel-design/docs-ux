@@ -91,3 +91,9 @@ footer {
   border-right-color: var(--x-color-neutral-800);
 }
 
+/* Force sidebar text color to black */
+.nextra-sidebar a,
+.nextra-sidebar button {
+  color: var(--x-color-black) !important;
+}
+
