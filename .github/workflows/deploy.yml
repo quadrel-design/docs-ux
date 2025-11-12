@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -62,6 +62,16 @@ jobs:
       - name: Disable Jekyll so _pagefind is served
         run: |
           touch out/.nojekyll
+      - name: Publish out/ to 'out' branch (overwrite each run)
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out
+          publish_branch: out
+          force_orphan: true
+          enable_jekyll: false
+          user_name: github-actions[bot]
+          user_email: github-actions[bot]@users.noreply.github.com
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out
