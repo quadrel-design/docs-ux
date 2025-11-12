@@ -115,10 +115,9 @@ body.has-demo-header [data-nextra-copy] {
   visibility: visible !important;
 }
 
-/* Hide theme switcher (light/dark mode toggle) on demo page */
-body.has-demo-header button[title="Change theme"] {
+/* Hide theme switcher container area on demo page */
+body.has-demo-header .x\:mx-auto.x\:flex.x\:max-w-\(--nextra-content-width\):has(button[title="Change theme"]) {
   display: none !important;
-  visibility: hidden !important;
 }
 
 /* Add padding to account for fixed header - target the main content area */
