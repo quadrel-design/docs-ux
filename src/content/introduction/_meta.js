@@ -1,4 +1,5 @@
 export default {
-  index: 'Overview',
-  create: 'Create'
+  quadrel: 'Quadrel in a nutshell',
+  quadrel-ux: 'UX Architecture',
+
 }
