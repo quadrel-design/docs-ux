@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react'
 
-export default function DemoHeaderConfig({ useDemoHeader }) {
+export default function QuadrelHeaderConfig({ useDemoHeader }) {
   useEffect(() => {
     if (useDemoHeader) {
       document.body.setAttribute('data-use-demo-header', 'true')

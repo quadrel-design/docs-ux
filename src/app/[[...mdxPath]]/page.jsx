@@ -1,6 +1,6 @@
 import { generateStaticParamsFor, importPage } from 'nextra/pages'
 import { useMDXComponents as getMDXComponents } from '../../../mdx-components'
-import DemoHeaderConfig from '../../../src/components/DemoHeaderConfig'
+import QuadrelHeaderConfig from '../../../src/components/QuadrelHeaderConfig'
 
 const baseGenerate = generateStaticParamsFor('mdxPath')
 export async function generateStaticParams() {
@@ -26,7 +26,7 @@ export default async function Page(props) {
   } = await importPage(params.mdxPath)
   return (
     <Wrapper toc={toc} metadata={metadata} sourceCode={sourceCode}>
-      <DemoHeaderConfig useDemoHeader={metadata?.useDemoHeader === true} />
+      <QuadrelHeaderConfig useDemoHeader={metadata?.useDemoHeader === true} />
       <MDXContent {...props} params={params} />
     </Wrapper>
   )

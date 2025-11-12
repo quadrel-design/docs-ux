@@ -2,13 +2,13 @@
 
 import { useEffect, useState } from 'react'
 
-export default function DemoHeader({ children }) {
+export default function QuadrelHeader({ children }) {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
   const [pageTitle, setPageTitle] = useState('')
   const [useDemoHeader, setUseDemoHeader] = useState(false)
   
   useEffect(() => {
-    // Check for data attribute set by DemoHeaderConfig
+    // Check for data attribute set by QuadrelHeaderConfig
     const checkDemoHeader = () => {
       const shouldUse = document.body.getAttribute('data-use-demo-header') === 'true'
       setUseDemoHeader(shouldUse)
