@@ -41,7 +41,7 @@ export default async function RootLayout({ children }) {
     logo={
       <a href="/" style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
         <img src={`${basePath}/assets/admin/logo.svg`} alt="Logo" style={{ height: 24, width: 'auto' }} />
-        <span style={{ opacity: '60%' }}> UX Guidelines</span>
+        <span style={{ opacity: '60%' }}> </span>
       </a>
     }
       // Next.js discord server
