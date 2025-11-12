@@ -1,4 +1,4 @@
 export default {
-  index: { display: 'hidden' },
-  demo: { display: 'hidden' }
+  index: 'Create',            // the link you want
+  demo: { display: 'hidden' } // hide all other children
 }
