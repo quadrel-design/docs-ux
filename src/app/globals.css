@@ -32,6 +32,10 @@ footer {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 }
 
+.q-title {
+  font-weight: 700;
+}
+
 .q-icon {
   display: inline-flex;
   align-items: center;
