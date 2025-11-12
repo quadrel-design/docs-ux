@@ -27,13 +27,6 @@ export default function QuadrelCard({
           width={32}
           height={32}
           style={{ display: 'block', height: 32, width: 32, objectFit: 'contain' }}
-          onError={e => {
-            // graceful fallback if the asset path is wrong
-            if (e.currentTarget.dataset.fallback !== '1') {
-              e.currentTarget.dataset.fallback = '1'
-              e.currentTarget.src = `${basePath}/assets/admin/logo.svg`
-            }
-          }}
         />
       )
     }
