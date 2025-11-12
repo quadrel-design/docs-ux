@@ -1,6 +1,6 @@
 import { Bleed } from 'nextra/components'
 
-# Introduction
+# Welcome
 
 **Nextra** is a [Next.js](https://nextjs.org) based static site generator.
 
@@ -11,24 +11,38 @@ custom layouts, i18n, and all the features you love about Next.js.
 
 <QuadrelCardGrid columns="auto-fit" min={280} gap={24} style={{ marginTop: 24 }}>
   <QuadrelCard
-    title="Accessibility"
-    icon={<svg id="icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><defs><style>{`.cls-1{fill:none;}`}</style></defs><polygon points="17 22 17 14 13 14 13 16 15 16 15 22 12 22 12 24 20 24 20 22 17 22"/><path d="M16,8a1.5,1.5,0,1,0,1.5,1.5A1.5,1.5,0,0,0,16,8Z"/><path d="M16,30A14,14,0,1,1,30,16,14,14,0,0,1,16,30ZM16,4A12,12,0,1,0,28,16,12,12,0,0,0,16,4Z"/><rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" className="cls-1" width="32" height="32"/></svg>}
+    title="Introduction"
+    icon="/assets/svg/information.svg"
     text="Get started with creating accessible interfaces."
-    linkHref="/accessibility"
+    linkHref="/introduction"
   />
 
   <QuadrelCard
-    title="Octicons"
-    icon={<svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>}
-    text="SVG icons built by GitHub."
-    linkHref="/octicons"
+    title="Floorplans"
+    icon="/assets/svg/plan.svg"
+    text="Get started with creating accessible interfaces."
+    linkHref="/floorplans"
   />
 
   <QuadrelCard
-    title="Primitives"
-    icon="/assets/admin/logo.svg"
+    title="Components"
+    icon="/assets/admin/fragments.svg"
     text="Tokens for color, spacing, typography."
-    linkHref="/primitives"
+    linkHref="/components"
+  />
+
+    <QuadrelCard
+    title="Patterns"
+    icon="/assets/admin/type-pattern.svg"
+    text="Tokens for color, spacing, typography."
+    linkHref="/patterns"
+  />
+
+    QuadrelCard
+    title="Templates"
+    icon="/assets/admin/template.svg"
+    text="Tokens for color, spacing, typography."
+    linkHref="/templates"
   />
 </QuadrelCardGrid>
 

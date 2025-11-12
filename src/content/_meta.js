@@ -1,5 +1,5 @@
 export default {
-  index: '',
+  index: { display: 'hidden' },
   'get-started': '',
   features: '',
   themes: '',
