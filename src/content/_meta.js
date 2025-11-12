@@ -1,5 +1,5 @@
 export default {
-  index: { display: 'hidden' },
+  index: 'Welcome',
   introduction: 'Introduction',
   floorplans: 'Floorplans',
   features: '',
