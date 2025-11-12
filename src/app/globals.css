@@ -67,6 +67,17 @@ footer {
 
 /* Active parent folder (button) also black */
  
+/* Do not highlight parent (folder) as blue; keep neutral like inactive */
+.nextra-sidebar li.active > button {
+  background: transparent !important;
+  color: var(--x-color-gray-600) !important;
+}
+:where(.dark *) .nextra-sidebar li.active > button {
+  color: var(--x-color-neutral-400) !important;
+}
+.nextra-sidebar li.active > button:hover {
+  background: transparent !important;
+}
 /* Sidebar right border matching the header's `.nextra-border` color logic */
 .nextra-sidebar {
   border-right: 1px solid var(--x-color-gray-200);
