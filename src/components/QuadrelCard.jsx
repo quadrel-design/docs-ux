@@ -18,7 +18,22 @@ export default function QuadrelCard({
     if (typeof icon === 'string') {
       const src =
         icon.startsWith('/') ? `${basePath}${icon}` : icon
-      return <img src={src} alt="" style={{ height: 24 }} />
+      return (
+        <img
+          src={src}
+          alt=""
+          width={24}
+          height={24}
+          style={{ display: 'block', height: 24, width: 24, objectFit: 'contain' }}
+          onError={e => {
+            // graceful fallback if the asset path is wrong
+            if (e.currentTarget.dataset.fallback !== '1') {
+              e.currentTarget.dataset.fallback = '1'
+              e.currentTarget.src = `${basePath}/assets/admin/logo.svg`
+            }
+          }}
+        />
+      )
     }
     // assume ReactNode
     return icon
@@ -31,7 +46,7 @@ export default function QuadrelCard({
         padding,
         textDecoration: 'none',
         color: 'inherit',
-        borderRadius: 12,
+        borderRadius: 8,
         border: '1px solid var(--x-color-gray-200)',
         background: 'var(--x-color-white, #fff)',
         ...style
