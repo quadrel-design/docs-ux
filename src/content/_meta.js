@@ -1,7 +1,7 @@
 export default {
   index: { display: 'hidden' },
+  introduction: 'Introduction',
   floorplans: 'Floorplans',
-  'get-started': '',
   features: '',
   themes: '',
   pattern: 'Patterns',
