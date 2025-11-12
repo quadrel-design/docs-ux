@@ -14,6 +14,14 @@ export default function DemoHeader({ children }) {
       // Get page title from document title, removing the template suffix
       const title = document.title.replace(' - Quadrel', '').trim()
       setPageTitle(title || 'Demo Use Case')
+      // Add class to body for easier CSS targeting
+      document.body.classList.add('has-demo-header')
+    } else {
+      document.body.classList.remove('has-demo-header')
+    }
+    
+    return () => {
+      document.body.classList.remove('has-demo-header')
     }
   }, [isDemoPage])
   
