@@ -1,7 +1,10 @@
 import nextra from 'nextra'
 
 const withNextra = nextra({
-  latex: true
+  latex: true,
+  themeConfig: {
+    copyPageButton: true
+  }
 })
 
 export default withNextra({

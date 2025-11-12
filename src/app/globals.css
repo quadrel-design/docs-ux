@@ -107,6 +107,14 @@ body.has-demo-header .nextra-navbar {
   display: none !important;
 }
 
+/* Show copy page button even when navbar is hidden */
+body.has-demo-header [class*="nextra-copy"],
+body.has-demo-header button[aria-label*="Copy"],
+body.has-demo-header [data-nextra-copy] {
+  display: flex !important;
+  visibility: visible !important;
+}
+
 /* Add padding to the main Layout wrapper only - prevents double padding */
 body.has-demo-header > div > div[class*="nextra"]:first-of-type {
   padding-top: 64px !important;
