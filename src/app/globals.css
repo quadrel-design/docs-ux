@@ -107,29 +107,15 @@ body.has-demo-header .nextra-navbar {
   display: none !important;
 }
 
-/* Add padding to content when alternative header is shown */
-body:has(header[data-alternative-header]) .nextra-content,
-body.has-demo-header .nextra-content,
-body:has(header[data-alternative-header]) main,
-body.has-demo-header main,
-body:has(header[data-alternative-header]) [class*="nextra-content"],
-body.has-demo-header [class*="nextra-content"],
-body:has(header[data-alternative-header]) [class*="nextra-main"],
-body.has-demo-header [class*="nextra-main"],
-body:has(header[data-alternative-header]) article,
-body.has-demo-header article {
+/* Add padding to the main Layout wrapper only - prevents double padding */
+body.has-demo-header > div > div[class*="nextra"]:first-of-type {
   padding-top: 64px !important;
+}
+
+/* Remove any default top margin/padding from content to prevent extra space */
+body.has-demo-header .nextra-content > *:first-child,
+body.has-demo-header main > *:first-child {
   margin-top: 0 !important;
-}
-
-/* Target the Layout component wrapper */
-body:has(header[data-alternative-header]) > div > div[class*="nextra"],
-body.has-demo-header > div > div[class*="nextra"] {
-  padding-top: 64px !important;
-}
-
-/* Add padding to the main content wrapper - more specific */
-body.has-demo-header > div > div > div[class*="nextra"] {
-  padding-top: 64px !important;
+  padding-top: 0 !important;
 }
 
