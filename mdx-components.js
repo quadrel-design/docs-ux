@@ -2,6 +2,7 @@ import { useMDXComponents as getDocsMDXComponents } from 'nextra-theme-docs'
 import QuadrelLightbox from './src/components/QuadrelLightbox'
 import QuadrelMasonryGallery from './src/components/QuadrelMasonryGallery'
 import QuadrelCard, { QuadrelCardGrid } from './src/components/QuadrelCard'
+import DemoHeaderConfig from './src/components/DemoHeaderConfig'
 
 const docsComponents = getDocsMDXComponents()
 
@@ -11,5 +12,6 @@ export const useMDXComponents = components => ({
   QuadrelMasonryGallery,
   QuadrelCard,
   QuadrelCardGrid,
+  DemoHeaderConfig,
   ...components
 })

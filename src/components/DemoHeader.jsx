@@ -1,31 +1,46 @@
 'use client'
 
-import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
 export default function DemoHeader({ children }) {
-  const pathname = usePathname()
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
-  const isDemoPage = pathname?.includes('/floorplans/create/demo')
   const [pageTitle, setPageTitle] = useState('')
+  const [useDemoHeader, setUseDemoHeader] = useState(false)
   
   useEffect(() => {
-    if (isDemoPage) {
-      // Get page title from document title, removing the template suffix
-      const title = document.title.replace(' - Quadrel', '').trim()
-      setPageTitle(title || 'Demo Use Case')
-      // Add class to body for easier CSS targeting
-      document.body.classList.add('has-demo-header')
-    } else {
-      document.body.classList.remove('has-demo-header')
+    // Check for data attribute set by DemoHeaderConfig
+    const checkDemoHeader = () => {
+      const shouldUse = document.body.getAttribute('data-use-demo-header') === 'true'
+      setUseDemoHeader(shouldUse)
+      
+      if (shouldUse) {
+        // Get page title from document title, removing the template suffix
+        const title = document.title.replace(' - Quadrel', '').trim()
+        setPageTitle(title || 'Demo Use Case')
+        // Add class to body for easier CSS targeting
+        document.body.classList.add('has-demo-header')
+      } else {
+        document.body.classList.remove('has-demo-header')
+      }
     }
     
+    // Check initially
+    checkDemoHeader()
+    
+    // Watch for changes to the data attribute
+    const observer = new MutationObserver(checkDemoHeader)
+    observer.observe(document.body, {
+      attributes: true,
+      attributeFilter: ['data-use-demo-header']
+    })
+    
     return () => {
+      observer.disconnect()
       document.body.classList.remove('has-demo-header')
     }
-  }, [isDemoPage])
+  }, [])
   
-  if (!isDemoPage) {
+  if (!useDemoHeader) {
     return null
   }
   
