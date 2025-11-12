@@ -32,6 +32,16 @@ footer {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 }
 
+.q-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
+  background: var(--x-color-gray-100);
+}
+
 .q-link {
   color: var(--x-color-primary-600);
   text-decoration: underline;

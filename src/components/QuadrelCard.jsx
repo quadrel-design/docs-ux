@@ -1,5 +1,7 @@
 'use client'
 
+import React from 'react'
+
 export default function QuadrelCard({
   title,
   text,
@@ -22,9 +24,9 @@ export default function QuadrelCard({
         <img
           src={src}
           alt=""
-          width={24}
-          height={24}
-          style={{ display: 'block', height: 24, width: 24, objectFit: 'contain' }}
+          width={32}
+          height={32}
+          style={{ display: 'block', height: 32, width: 32, objectFit: 'contain' }}
           onError={e => {
             // graceful fallback if the asset path is wrong
             if (e.currentTarget.dataset.fallback !== '1') {
@@ -36,6 +38,16 @@ export default function QuadrelCard({
       )
     }
     // assume ReactNode
+    try {
+      if (React.isValidElement(icon)) {
+        const prevStyle = (icon.props && icon.props.style) || {}
+        return React.cloneElement(icon, {
+          width: 32,
+          height: 32,
+          style: { ...prevStyle, width: 32, height: 32 }
+        })
+      }
+    } catch {}
     return icon
   }
 
