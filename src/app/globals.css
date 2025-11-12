@@ -101,3 +101,13 @@ footer {
   color: var(--x-color-black) !important;
 }
 
+/* Hide default navbar when alternative header is shown (on demo page) */
+body:has(header[data-alternative-header]) .nextra-navbar {
+  display: none !important;
+}
+
+/* Add padding to content when alternative header is shown */
+body:has(header[data-alternative-header]) .nextra-content {
+  padding-top: 64px !important;
+}
+

@@ -3,6 +3,7 @@ import { Footer, Layout, Navbar } from 'nextra-theme-docs'
 import { Head } from 'nextra/components'
 import { getPageMap } from 'nextra/page-map'
 import { Inter } from 'next/font/google'
+import DemoHeader from '../components/DemoHeader'
 import 'nextra-theme-docs/style.css'
 import 'yet-another-react-lightbox/styles.css'
 import 'yet-another-react-lightbox/plugins/captions.css'
@@ -53,6 +54,7 @@ export default async function RootLayout({ children }) {
     <html lang="en" dir="ltr" suppressHydrationWarning className={inter.className}>
       <Head faviconGlyph="✦" />
       <body>
+        <DemoHeader />
         <Layout
           navbar={navbar}
           footer={<Footer>DaziT {new Date().getFullYear()} © Quadrel</Footer>}
