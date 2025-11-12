@@ -1,4 +1,4 @@
 export default {
   index: 'Overview',
-  demo: 'Demo',
+  demo: { display: 'hidden' },
 }
