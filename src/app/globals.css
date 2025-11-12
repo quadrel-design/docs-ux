@@ -115,8 +115,8 @@ body.has-demo-header [data-nextra-copy] {
   visibility: visible !important;
 }
 
-/* Hide theme switcher container area on demo page */
-body.has-demo-header .x\:mx-auto.x\:flex.x\:max-w-\(--nextra-content-width\):has(button[title="Change theme"]) {
+/* Hide theme switcher container area on demo page - target div with specific padding classes */
+body.has-demo-header div[class*="x:gap-2"][class*="x:py-2"][class*="x:px-4"]:has(button[title="Change theme"]) {
   display: none !important;
 }
 
