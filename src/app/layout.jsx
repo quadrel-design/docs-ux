@@ -12,6 +12,10 @@ import 'react-photo-album/masonry.css'
 import 'react-photo-album/rows.css'
 import 'react-photo-album/columns.css'
 import './globals.css'
+import './variables.css'
+import './components.css'
+import './nextra-overrides.css'
+import './demo-header.css'
 
 const inter = Inter({ subsets: ['latin'], display: 'swap' })
 

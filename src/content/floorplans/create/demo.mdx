@@ -25,6 +25,21 @@ Nextra works like a Next.js plugin, and it accepts a theme config (layout) to
 render the page. To start: [^3]
 
 ```mermaid
+%%{init: {
+  "theme": "base",
+  "themeVariables": {
+    "primaryColor": "var(--x-color-primary-600)",
+    "primaryTextColor": "var(--x-color-white)",
+    "primaryBorderColor": "var(--x-color-gray-400)",
+    "secondaryColor": "var(--x-color-gray-100)",
+    "lineColor": "var(--x-color-gray-600)",
+    "fontSize": "var(--q-font-size-base)",
+    "fontFamily": "var(--q-font-family)",
+    "nodeTextColor": "var(--x-color-black)",
+    "noteBkgColor": "var(--x-color-gray-100)",
+    "noteTextColor": "var(--x-color-black)"
+  }
+}}%%
 graph LR
   subgraph Tabelle [Tabellenseite]
     A[Neu klicken] --> B[Detailseite öffnen]

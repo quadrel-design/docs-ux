@@ -1,0 +1,83 @@
+/* Nextra Theme Overrides */
+
+/* Navbar and Footer Padding */
+/* Increase specificity by targeting the nav element more specifically */
+.nextra-navbar > nav,
+.nextra-navbar nav[role="navigation"] {
+  padding-left: var(--q-spacing-base);
+  padding-right: var(--q-spacing-base);
+}
+/* Target footer more specifically */
+body > footer,
+.nextra-container > footer {
+  padding-left: var(--q-spacing-base);
+  padding-right: var(--q-spacing-base);
+}
+
+/* Sidebar Navigation Styles */
+/* Active item in left navigation: black background + white text */
+/* Sidebar (left) uses li.active > a for current item */
+/* Increase specificity by targeting within sidebar structure */
+.nextra-sidebar ul li.active > a[href],
+.nextra-sidebar nav li.active > a[href] {
+  background: var(--x-color-black);
+  color: var(--x-color-white);
+  border-radius: var(--q-border-radius);
+}
+.nextra-sidebar ul li.active > a[href] *,
+.nextra-sidebar nav li.active > a[href] * {
+  color: var(--x-color-white);
+}
+.nextra-sidebar ul li.active > a[href]:hover,
+.nextra-sidebar nav li.active > a[href]:hover {
+  color: var(--x-color-white);
+}
+
+/* Do not highlight parent (folder) as blue; keep neutral like inactive */
+/* Increase specificity for button elements */
+.nextra-sidebar ul li.active > button[type="button"],
+.nextra-sidebar nav li.active > button[type="button"] {
+  background: transparent;
+  color: var(--x-color-gray-600);
+}
+:where(.dark *) .nextra-sidebar ul li.active > button[type="button"],
+:where(.dark *) .nextra-sidebar nav li.active > button[type="button"] {
+  color: var(--x-color-neutral-400);
+}
+.nextra-sidebar ul li.active > button[type="button"]:hover,
+.nextra-sidebar nav li.active > button[type="button"]:hover {
+  background: transparent;
+}
+
+/* Sidebar right border matching the header's `.nextra-border` color logic */
+.nextra-sidebar {
+  border-right: var(--q-border-width) solid var(--x-color-gray-200);
+}
+@media (prefers-contrast: more) {
+  /* Increase specificity for contrast mode */
+  .nextra-sidebar[class*="sidebar"] {
+    border-right-color: var(--x-color-neutral-400);
+  }
+}
+:where(.dark *) .nextra-sidebar {
+  border-right-color: var(--x-color-neutral-800);
+}
+
+/* Force sidebar text color to black */
+/* Increase specificity by targeting links and buttons within sidebar structure */
+.nextra-sidebar ul a,
+.nextra-sidebar nav a,
+.nextra-sidebar ul button,
+.nextra-sidebar nav button {
+  color: var(--x-color-black);
+}
+
+/* Ensure parent folder buttons match other sidebar links */
+/* Target all button elements and their children to override Nextra defaults */
+.nextra-sidebar li > button[type="button"],
+.nextra-sidebar li > button[type="button"] span,
+.nextra-sidebar li > button[type="button"] > span,
+.nextra-sidebar li > button[type="button"] * {
+  color: var(--x-color-black);
+  font-weight: 400;
+}

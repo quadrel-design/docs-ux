@@ -1,0 +1,26 @@
+:root {
+  --nextra-content-width: 100%;
+
+  /* Spacing */
+  --q-spacing-base: 24px;
+
+  /* Header */
+  --q-header-height: 64px;
+
+  /* Border */
+  --q-border-radius: 8px;
+  --q-border-width: 1px;
+
+  /* Shadows */
+  --q-shadow-y: 6px;
+  --q-shadow-blur: 16px;
+  --q-shadow-color: rgba(0, 0, 0, 0.08);
+
+  /* Typography */
+  --q-font-weight-bold: 700;
+  --q-font-size-base: 14px;
+  --q-font-family: inherit;
+
+  /* Icons */
+  --q-icon-wrapper-size: 48px;
+}

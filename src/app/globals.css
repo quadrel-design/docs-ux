@@ -1,138 +1,23 @@
-:root {
-  --nextra-content-width: 100%;
-}
-
 /* Make the whole page span full width by removing wrapper constraints */
-.x\:max-w-\(--nextra-content-width\) {
-  max-width: none !important;
+main .x\:max-w-\(--nextra-content-width\),
+.nextra-content .x\:max-w-\(--nextra-content-width\),
+article .x\:max-w-\(--nextra-content-width\) {
+  max-width: none;
 }
-.x\:mx-auto {
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-}
-/* Remove default horizontal padding on navbar/footer wrappers */
-.nextra-navbar nav {
-  padding-left: 24px !important;
-  padding-right: 24px !important;
-}
-footer {
-  padding-left: 24px !important;
-  padding-right: 24px !important;
-}
-.q-card {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  transition: box-shadow var(--x-default-transition-duration, 200ms) var(--x-default-transition-timing-function, ease);
-  will-change: box-shadow;
+main .x\:mx-auto,
+.nextra-content .x\:mx-auto,
+article .x\:mx-auto {
+  margin-left: 0;
+  margin-right: 0;
 }
 
-.q-card:hover {
-  /* Shadow only; no margin/padding/border changes to avoid reflow */
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-}
-
-.q-title {
-  font-weight: 700;
-}
-
-.q-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 9999px;
-  background: var(--x-color-gray-100);
-}
-
-.q-link {
-  color: var(--x-color-primary-600);
-  text-decoration: underline;
-  transition: color var(--x-default-transition-duration, 200ms) var(--x-default-transition-timing-function, ease);
-}
-.q-link:hover {
-  color: var(--x-color-primary-700);
-}
-
-/* Active item in left navigation: black background + white text */
-/* Sidebar (left) uses li.active > a for current item */
-.nextra-sidebar li.active > a {
-  background: var(--x-color-black) !important;
-  color: var(--x-color-white) !important;
-  border-radius: 8px;
-}
-.nextra-sidebar li.active > a * {
-  color: var(--x-color-white) !important;
-}
-.nextra-sidebar li.active > a:hover {
-  color: var(--x-color-white) !important;
-}
-
-/* Active parent folder (button) also black */
- 
-/* Do not highlight parent (folder) as blue; keep neutral like inactive */
-.nextra-sidebar li.active > button {
-  background: transparent !important;
-  color: var(--x-color-gray-600) !important;
-}
-:where(.dark *) .nextra-sidebar li.active > button {
-  color: var(--x-color-neutral-400) !important;
-}
-.nextra-sidebar li.active > button:hover {
-  background: transparent !important;
-}
-/* Sidebar right border matching the header's `.nextra-border` color logic */
-.nextra-sidebar {
-  border-right: 1px solid var(--x-color-gray-200);
-}
-@media (prefers-contrast: more) {
-  .nextra-sidebar {
-    border-right-color: var(--x-color-neutral-400) !important;
-  }
-}
-:where(.dark *) .nextra-sidebar {
-  border-right-color: var(--x-color-neutral-800);
-}
-
-/* Force sidebar text color to black */
-.nextra-sidebar a,
-.nextra-sidebar button {
-  color: var(--x-color-black) !important;
-}
-
-/* Ensure parent folder buttons match other sidebar links */
-/* Target all button elements and their children to override Nextra defaults */
-.nextra-sidebar li > button[type="button"],
-.nextra-sidebar li > button[type="button"] span,
-.nextra-sidebar li > button[type="button"] > span,
-.nextra-sidebar li > button[type="button"] * {
-  color: var(--x-color-black) !important;
-  font-weight: 400 !important;
-}
-
-/* Hide default navbar when alternative header is shown (on demo page) */
-body:has(header[data-alternative-header]) .nextra-navbar,
-body.has-demo-header .nextra-navbar {
+/* Hide theme switcher globally - target button and its parent container */
+.nextra-container div[class*="x:gap-2"][class*="x:py-2"][class*="x:px-4"]:has(button[title="Change theme"]) {
   display: none !important;
+  visibility: hidden !important;
 }
-
-/* Show copy page button even when navbar is hidden */
-body.has-demo-header [class*="nextra-copy"],
-body.has-demo-header button[aria-label*="Copy"],
-body.has-demo-header [data-nextra-copy] {
-  display: flex !important;
-  visibility: visible !important;
-}
-
-/* Hide theme switcher container area on demo page - target div with specific padding classes */
-body.has-demo-header div[class*="x:gap-2"][class*="x:py-2"][class*="x:px-4"]:has(button[title="Change theme"]) {
+.nextra-container button[title="Change theme"] {
   display: none !important;
-}
-
-/* Add padding to account for fixed header - target the main content area */
-body.has-demo-header main,
-body.has-demo-header .nextra-content {
-  padding-top: 64px !important;
+  visibility: hidden !important;
 }
 

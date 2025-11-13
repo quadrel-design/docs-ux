@@ -1,0 +1,47 @@
+/* Demo Header Styles */
+
+/* Hide default navbar when alternative header is shown (on demo page) */
+/* High specificity needed to override Nextra's navbar display */
+body:has(header[data-alternative-header]) .nextra-navbar[class*="navbar"],
+body.has-demo-header .nextra-navbar[class*="navbar"] {
+  display: none;
+}
+
+/* Show copy page button even when navbar is hidden */
+/* Increase specificity for copy button */
+body.has-demo-header [class*="nextra-copy"][class*="button"],
+body.has-demo-header button[aria-label*="Copy"][type="button"],
+body.has-demo-header [data-nextra-copy][class*="copy"] {
+  display: flex;
+  visibility: visible;
+}
+
+/* Hide theme switcher container area on demo page - target div with specific padding classes */
+/* This rule is now covered by the global rule in globals.css */
+/* body.has-demo-header div[class*="x:gap-2"][class*="x:py-2"][class*="x:px-4"]:has(button[title="Change theme"]) {
+  display: none;
+} */
+
+/* Add padding to account for fixed header - target the main content area */
+body.has-demo-header main[class*="content"],
+body.has-demo-header .nextra-content[class*="content"] {
+  padding-top: var(--q-header-height);
+}
+
+/* Ensure demo header title is left-aligned */
+header[data-alternative-header] {
+  justify-content: flex-start;
+}
+header[data-alternative-header] > div {
+  text-align: left;
+  width: auto;
+}
+
+/* Ensure h1 headings on demo pages are left-aligned */
+body.has-demo-header main[class*="content"] h1,
+body.has-demo-header .nextra-content[class*="content"] h1,
+body.has-demo-header h1.x\:text-4xl {
+  text-align: left !important;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}

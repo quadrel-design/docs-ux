@@ -5,6 +5,34 @@ import { MasonryPhotoAlbum, RowsPhotoAlbum, ColumnsPhotoAlbum } from 'react-phot
 import Lightbox from 'yet-another-react-lightbox'
 import Captions from 'yet-another-react-lightbox/plugins/captions'
 
+/**
+ * @typedef {Object} Photo
+ * @property {string} src - The URL of the image.
+ * @property {number} [width] - The width of the image.
+ * @property {number} [height] - The height of the image.
+ * @property {string} [title] - The title of the image for the lightbox caption.
+ * @property {string} [description] - The description of the image for the lightbox caption.
+ */
+
+/**
+ * @typedef {Object} QuadrelMasonryGalleryProps
+ * @property {Photo[]} [photos=[]] - An array of photo objects, each with a `src` and optional `width`, `height`, `title`, and `description`.
+ * @property {number} [spacing=12] - The spacing between photos in the gallery.
+ * @property {number | Object} [columns] - The number of columns for the masonry or columns layout. Can be a number or an object for responsive columns (e.g., `{ xs: 1, sm: 2, md: 3 }`).
+ * @property {'masonry' | 'rows' | 'columns'} [layout='masonry'] - The layout type for the gallery.
+ * @property {number} [targetRowHeight=260] - The target row height for the 'rows' layout.
+ * @property {number} [maxWidth] - The maximum width of the gallery container.
+ * @property {React.CSSProperties} [containerStyle] - Custom CSS style for the gallery container.
+ * @property {number} [lightboxPaddingY=48] - The vertical padding for the lightbox carousel.
+ */
+
+/**
+ * A responsive image gallery component that supports masonry, rows, and columns layouts.
+ * It uses `react-photo-album` for layout and `yet-another-react-lightbox` for the lightbox functionality.
+ * Image dimensions are automatically resolved if not provided.
+ * @param {QuadrelMasonryGalleryProps} props - The properties for the QuadrelMasonryGallery component.
+ * @returns {JSX.Element} The rendered image gallery component.
+ */
 export default function QuadrelMasonryGallery({
   photos = [],
   spacing = 12,

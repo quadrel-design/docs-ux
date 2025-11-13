@@ -2,6 +2,25 @@
 
 import React from 'react'
 
+/**
+ * @typedef {Object} QuadrelCardProps
+ * @property {string} title - The title of the card.
+ * @property {string} [text] - The descriptive text content of the card. If children are provided, this will be ignored.
+ * @property {string|React.ReactNode} [icon] - The icon to display on the card. Can be a URL string for an image or a React Node.
+ * @property {React.ReactNode} [children] - React children to be rendered as the body of the card. Overrides `text` prop if provided.
+ * @property {number} [padding=24] - The padding around the card content.
+ * @property {number} [gap=24] - The spacing between elements within the card.
+ * @property {React.CSSProperties} [style] - Custom CSS style for the card container.
+ * @property {string} [linkHref] - The URL for the link at the bottom of the card.
+ * @property {string} [linkLabel='Learn more →'] - The text for the link at the bottom of the card.
+ */
+
+/**
+ * A customizable card component for displaying content with an optional icon, title, text, and a link.
+ * It automatically handles internal Next.js links and external links.
+ * @param {QuadrelCardProps} props - The properties for the QuadrelCard component.
+ * @returns {JSX.Element} The rendered card component.
+ */
 export default function QuadrelCard({
   title,
   text,
@@ -81,6 +100,22 @@ export default function QuadrelCard({
   return content
 }
 
+/**
+ * @typedef {Object} QuadrelCardGridProps
+ * @property {React.ReactNode} children - QuadrelCard components or other React nodes to be displayed in the grid.
+ * @property {number} [gap=24] - The spacing between grid items.
+ * @property {number} [min=200] - The minimum width of a grid item.
+ * @property {number} [max=300] - The maximum width of a grid item.
+ * @property {string} [columns='auto-fit'] - The CSS grid-template-columns value.
+ * @property {React.CSSProperties} [style] - Custom CSS style for the grid container.
+ */
+
+/**
+ * A grid container component for arranging QuadrelCard components.
+ * It uses CSS Grid to create a responsive layout.
+ * @param {QuadrelCardGridProps} props - The properties for the QuadrelCardGrid component.
+ * @returns {JSX.Element} The rendered grid container.
+ */
 export function QuadrelCardGrid({
   children,
   gap = 24,

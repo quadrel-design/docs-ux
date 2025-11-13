@@ -5,6 +5,23 @@ import Lightbox from 'yet-another-react-lightbox'
 import Captions from 'yet-another-react-lightbox/plugins/captions'
 import Thumbnails from 'yet-another-react-lightbox/plugins/thumbnails'
 
+/**
+ * @typedef {Object} QuadrelLightboxProps
+ * @property {string} src - The URL of the image to display in the lightbox. Can be a relative path (e.g., /assets/image.png) or an absolute URL.
+ * @property {string} [alt=''] - The alt text for the image thumbnail.
+ * @property {string} [title] - The title to display in the lightbox caption.
+ * @property {string} [description] - The description to display in the lightbox caption.
+ * @property {number} [thumbWidth=320] - The width of the image thumbnail on the page.
+ * @property {React.CSSProperties} [thumbStyle={}] - Custom CSS style for the image thumbnail.
+ * @property {number} [lightboxPaddingY=48] - The vertical padding for the lightbox carousel.
+ */
+
+/**
+ * A customizable lightbox component that displays an image thumbnail, which expands into a full-screen lightbox on click.
+ * It uses `yet-another-react-lightbox` for the lightbox functionality.
+ * @param {QuadrelLightboxProps} props - The properties for the QuadrelLightbox component.
+ * @returns {JSX.Element} The rendered image thumbnail and lightbox component.
+ */
 export default function QuadrelLightbox({
   src,
   alt = '',

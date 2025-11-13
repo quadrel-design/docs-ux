@@ -2,6 +2,19 @@
 
 import { useEffect, useState } from 'react'
 
+/**
+ * @typedef {Object} QuadrelHeaderProps
+ * @property {React.ReactNode} [children] - React children to be rendered alongside the page title in the header.
+ */
+
+/**
+ * A custom header component that appears on pages configured with `useDemoHeader: true` in their front matter.
+ * It displays the page title and can optionally render children components.
+ * The header's visibility and content are controlled by the `data-use-demo-header` attribute on the `document.body`,
+ * which is set by the `QuadrelHeaderConfig` component.
+ * @param {QuadrelHeaderProps} props - The properties for the QuadrelHeader component.
+ * @returns {JSX.Element | null} The rendered header component or null if not used on the current page.
+ */
 export default function QuadrelHeader({ children }) {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
   const [pageTitle, setPageTitle] = useState('')
@@ -58,10 +71,10 @@ export default function QuadrelHeader({ children }) {
         borderBottom: '1px solid var(--x-color-gray-200)',
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'space-between'
+        justifyContent: 'flex-start' // Changed from 'space-between' for left alignment
       }}
     >
-      <div style={{ paddingLeft: '24px', fontSize: '1rem', fontWeight: 500, color: 'var(--x-color-black)' }}>
+      <div style={{ paddingLeft: '24px', fontSize: '1rem', fontWeight: 500, color: 'var(--x-color-black)', textAlign: 'left' }}>
         {pageTitle}
       </div>
       {children}
