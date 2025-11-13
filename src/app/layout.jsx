@@ -43,12 +43,12 @@ export default async function RootLayout({ children }) {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
   const navbar = (
     <Navbar
-    logo={
+      logo={
       <a href="/" style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
         <img src={`${basePath}/assets/admin/logo.svg`} alt="Logo" style={{ height: 24, width: 'auto' }} />
         <span style={{ opacity: '60%' }}> </span>
       </a>
-    }
+      }
       // Next.js discord server
       chatLink="https://discord.gg/hEM84NMkRv"
     />

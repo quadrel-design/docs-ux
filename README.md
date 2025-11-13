@@ -64,7 +64,7 @@ This command will create an optimized production build in the `.next` directory 
 
 ## Deployment to GitHub Pages
 
-This project is configured to be deployed to GitHub Pages using a GitHub Actions workflow. The `next.config.mjs` includes `output: 'export'`, `basePath`, and `assetPrefix` to support static export and deployment to a subpath.
+This project includes a GitHub Actions workflow (`.github/workflows/deploy.yml`) configured for deployment to GitHub Pages. The `next.config.mjs` also includes `output: 'export'`, `basePath`, and `assetPrefix` to support static export and deployment to a subpath.
 
 ### Environment Variables
 
