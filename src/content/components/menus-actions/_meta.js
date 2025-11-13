@@ -1,4 +1,4 @@
 export default {
-  index: 'Create',
+  index: 'Menu and Actions',
   demo: { display: 'hidden' }
 }
