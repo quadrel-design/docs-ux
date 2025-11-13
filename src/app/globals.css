@@ -101,6 +101,16 @@ footer {
   color: var(--x-color-black) !important;
 }
 
+/* Ensure parent folder buttons match other sidebar links */
+/* Target all button elements and their children to override Nextra defaults */
+.nextra-sidebar li > button[type="button"],
+.nextra-sidebar li > button[type="button"] span,
+.nextra-sidebar li > button[type="button"] > span,
+.nextra-sidebar li > button[type="button"] * {
+  color: var(--x-color-black) !important;
+  font-weight: 400 !important;
+}
+
 /* Hide default navbar when alternative header is shown (on demo page) */
 body:has(header[data-alternative-header]) .nextra-navbar,
 body.has-demo-header .nextra-navbar {
