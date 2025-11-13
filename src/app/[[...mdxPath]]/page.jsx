@@ -1,6 +1,5 @@
 import { generateStaticParamsFor, importPage } from 'nextra/pages'
 import { useMDXComponents as getMDXComponents } from '../../../mdx-components'
-import LayoutConfig from '../../../src/components/LayoutConfig'
 
 const baseGenerate = generateStaticParamsFor('mdxPath')
 export async function generateStaticParams() {
@@ -26,7 +25,6 @@ export default async function Page(props) {
   } = await importPage(params.mdxPath)
   return (
     <Wrapper toc={toc} metadata={metadata} sourceCode={sourceCode}>
-      <LayoutConfig layout={metadata?.theme?.layout} />
       <MDXContent {...props} params={params} />
     </Wrapper>
   )
