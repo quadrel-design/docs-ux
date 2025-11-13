@@ -1,4 +1,8 @@
 export default {
+  // Global theme defaults for this section
+  theme: {
+    layout: 'full'
+  },
   index: 'Welcome',
   introduction: 'Introduction',
   floorplans: 'Floorplans',
