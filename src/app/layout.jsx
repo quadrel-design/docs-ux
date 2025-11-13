@@ -3,7 +3,6 @@ import { Footer, Layout, Navbar } from 'nextra-theme-docs'
 import { Head } from 'nextra/components'
 import { getPageMap } from 'nextra/page-map'
 import { Inter } from 'next/font/google'
-import QuadrelHeader from '../components/QuadrelHeader'
 import 'nextra-theme-docs/style.css'
 import 'yet-another-react-lightbox/styles.css'
 import 'yet-another-react-lightbox/plugins/captions.css'
@@ -15,7 +14,6 @@ import './globals.css'
 import './variables.css'
 import './components.css'
 import './nextra-overrides.css'
-import './demo-header.css'
 
 const inter = Inter({ subsets: ['latin'], display: 'swap' })
 
@@ -58,7 +56,6 @@ export default async function RootLayout({ children }) {
     <html lang="en" dir="ltr" suppressHydrationWarning className={inter.className}>
       <Head faviconGlyph="✦" />
       <body>
-        <QuadrelHeader />
         <Layout
           navbar={navbar}
           footer={<Footer>DaziT {new Date().getFullYear()} © Quadrel</Footer>}

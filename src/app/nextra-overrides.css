@@ -1,5 +1,10 @@
 /* Nextra Theme Overrides */
 
+/* Hide Nextra Navbar when navbar is explicitly false */
+.nextra-navbar {
+  display: none !important;
+}
+
 /* Navbar and Footer Padding */
 /* Increase specificity by targeting the nav element more specifically */
 .nextra-navbar > nav,
@@ -80,4 +85,13 @@ body > footer,
 .nextra-sidebar li > button[type="button"] * {
   color: var(--x-color-black);
   font-weight: 400;
+}
+
+/* Ensure h1 headings are left-aligned on full layout pages */
+body[data-layout="full"] main[class*="content"] h1,
+body[data-layout="full"] .nextra-content[class*="content"] h1,
+body[data-layout="full"] h1.x\:text-4xl {
+  text-align: left !important;
+  margin-left: 0 !important;
+  margin-right: auto !important;
 }
