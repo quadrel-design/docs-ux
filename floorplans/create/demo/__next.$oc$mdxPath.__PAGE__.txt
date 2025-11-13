@@ -1,0 +1,113 @@
+1:"$Sreact.fragment"
+2:I[55169,["/docs-ux/_next/static/chunks/69d6470f6a456a18.js","/docs-ux/_next/static/chunks/ed53e381356371e4.js","/docs-ux/_next/static/chunks/4c6079075f79c75e.js","/docs-ux/_next/static/chunks/ab06afac8c8cd9cb.js"],"TOCProvider"]
+3:I[769,["/docs-ux/_next/static/chunks/69d6470f6a456a18.js","/docs-ux/_next/static/chunks/ed53e381356371e4.js","/docs-ux/_next/static/chunks/4c6079075f79c75e.js","/docs-ux/_next/static/chunks/ab06afac8c8cd9cb.js"],"Sidebar"]
+4:I[47486,["/docs-ux/_next/static/chunks/69d6470f6a456a18.js","/docs-ux/_next/static/chunks/ed53e381356371e4.js","/docs-ux/_next/static/chunks/4c6079075f79c75e.js","/docs-ux/_next/static/chunks/ab06afac8c8cd9cb.js"],"ClientWrapper"]
+b:I[63894,["/docs-ux/_next/static/chunks/69d6470f6a456a18.js","/docs-ux/_next/static/chunks/ed53e381356371e4.js","/docs-ux/_next/static/chunks/4c6079075f79c75e.js","/docs-ux/_next/static/chunks/ab06afac8c8cd9cb.js"],"HeadingAnchor"]
+c:I[90232,["/docs-ux/_next/static/chunks/69d6470f6a456a18.js","/docs-ux/_next/static/chunks/ed53e381356371e4.js","/docs-ux/_next/static/chunks/4c6079075f79c75e.js","/docs-ux/_next/static/chunks/ab06afac8c8cd9cb.js"],"Mermaid"]
+d:I[21712,["/docs-ux/_next/static/chunks/69d6470f6a456a18.js","/docs-ux/_next/static/chunks/ed53e381356371e4.js","/docs-ux/_next/static/chunks/4c6079075f79c75e.js","/docs-ux/_next/static/chunks/ab06afac8c8cd9cb.js"],"Tabs"]
+e:I[21712,["/docs-ux/_next/static/chunks/69d6470f6a456a18.js","/docs-ux/_next/static/chunks/ed53e381356371e4.js","/docs-ux/_next/static/chunks/4c6079075f79c75e.js","/docs-ux/_next/static/chunks/ab06afac8c8cd9cb.js"],"Tab"]
+f:I[27984,["/docs-ux/_next/static/chunks/69d6470f6a456a18.js","/docs-ux/_next/static/chunks/ed53e381356371e4.js","/docs-ux/_next/static/chunks/4c6079075f79c75e.js","/docs-ux/_next/static/chunks/ab06afac8c8cd9cb.js"],"default"]
+10:I[97367,["/docs-ux/_next/static/chunks/ff1a16fafef87110.js","/docs-ux/_next/static/chunks/64c0a5e3a0354479.js"],"OutletBoundary"]
+11:"$Sreact.suspense"
+5:T8c7,export const metadata = {
+  title: 'Demo Use Case',
+  theme: {
+    layout: 'default',
+    navbar: true,
+    sidebar: false,
+    toc: true,
+    breadcrumb: false,
+    pagination: true,
+    typesetting: 'article',
+    copyPage: true
+  }
+}
+
+import { Steps } from 'nextra/components'
+import { Tabs } from 'nextra/components'
+
+
+# Create / Initial Page
+
+## Create an initial Business Object
+
+Nextra works like a Next.js plugin, and it accepts a theme config (layout) to
+render the page. To start: [^3]
+
+```mermaid
+%%{init: {
+  "theme": "base",
+  "themeVariables": {
+    "primaryColor": "var(--x-color-primary-600)",
+    "primaryTextColor": "var(--x-color-white)",
+    "primaryBorderColor": "var(--x-color-gray-400)",
+    "secondaryColor": "var(--x-color-gray-100)",
+    "lineColor": "var(--x-color-gray-600)",
+    "fontSize": "var(--q-font-size-base)",
+    "fontFamily": "var(--q-font-family)",
+    "nodeTextColor": "var(--x-color-black)",
+    "noteBkgColor": "var(--x-color-gray-100)",
+    "noteTextColor": "var(--x-color-black)"
+  }
+}}%%
+graph LR
+  subgraph Tabelle [Tabellenseite]
+    A[Neu klicken] --> B[Detailseite öffnen]
+  end
+
+  subgraph Detail [Detailseite]
+    B --> C[Formular ausfüllen]
+    C --> D[Speichern]
+  end
+
+  D --> E[Zurück zur Tabelle]
+
+  subgraph Tabelle2 [Tabellenseite]
+    E
+  end
+```
+
+<Steps>
+### Create Business Object
+
+<Tabs items={['Preview', 'Description', 'Links']}>
+  <Tabs.Tab>
+    <QuadrelLightbox
+      src="/assets/test/Shell.png"
+      alt="Demo image"
+      title="Demo-Bild"
+      description="Kurzer erklärender Text zur Abbildung."
+      thumbWidth={800}
+      thumbStyle={{ marginTop: 8 }}
+      lightboxPaddingY={72}
+    />
+  </Tabs.Tab>
+  <Tabs.Tab>Some description</Tabs.Tab>
+  <Tabs.Tab>wefgqewfqweq ew qew rqew</Tabs.Tab>
+</Tabs>
+
+### Install the docs theme
+
+<Tabs items={['Preview', 'Description', 'Links']}>
+  <Tabs.Tab>
+    <QuadrelLightbox
+      src="/assets/test/Shell.png"
+      alt="Demo image"
+      title="Demo-Bild"
+      description="Kurzer erklärender Text zur Abbildung."
+      thumbWidth={800}
+      thumbStyle={{ marginTop: 8 }}
+      lightboxPaddingY={72}
+    />
+  </Tabs.Tab>
+  <Tabs.Tab>Some description</Tabs.Tab>
+  <Tabs.Tab>wefgqewfqweq ew qew rqew</Tabs.Tab>
+</Tabs>
+
+</Steps>0:{"buildId":"HB6RXgbdEpLMjcaWbTSrV","rsc":["$","$1","c",{"children":[["$","div",null,{"className":"x:mx-auto x:flex x:max-w-(--nextra-content-width)","children":["$","$L2",null,{"value":[{"value":"Create an initial Business Object","id":"create-an-initial-business-object","depth":2},{"value":"Create Business Object","id":"create-business-object","depth":3},{"value":"Install the docs theme","id":"install-the-docs-theme","depth":3}],"children":[["$","$L3",null,{}],["$","$L4",null,{"metadata":{"title":"Demo Use Case","theme":{"layout":"default","navbar":true,"sidebar":false,"toc":true,"breadcrumb":false,"pagination":true,"typesetting":"article","copyPage":true},"filePath":"src/content/floorplans/create/demo.mdx","timestamp":1763042739000},"sourceCode":"$5","children":[["$","div",null,{"id":"nextra-skip-nav"}],["$","main",null,{"data-pagefind-body":true,"children":[["$","h1",null,{"className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-bold x:mt-2 x:text-4xl","children":["Create / Initial Page","$undefined"]}],"\n",["$","h2",null,{"id":"create-an-initial-business-object","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["Create an initial Business Object","$L6"]}],"\n","$L7","\n","$L8","\n","$L9"]}]]}]]}]}],null,"$La"]}],"loading":null,"isPartial":false}
+6:["$","$Lb",null,{"id":"create-an-initial-business-object"}]
+7:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":"Nextra works like a Next.js plugin, and it accepts a theme config (layout) to\nrender the page. To start: [^3]"}]
+8:["$","$Lc",null,{"chart":"%%{init: {\\n  \"theme\": \"base\",\\n  \"themeVariables\": {\\n    \"primaryColor\": \"var(--x-color-primary-600)\",\\n    \"primaryTextColor\": \"var(--x-color-white)\",\\n    \"primaryBorderColor\": \"var(--x-color-gray-400)\",\\n    \"secondaryColor\": \"var(--x-color-gray-100)\",\\n    \"lineColor\": \"var(--x-color-gray-600)\",\\n    \"fontSize\": \"var(--q-font-size-base)\",\\n    \"fontFamily\": \"var(--q-font-family)\",\\n    \"nodeTextColor\": \"var(--x-color-black)\",\\n    \"noteBkgColor\": \"var(--x-color-gray-100)\",\\n    \"noteTextColor\": \"var(--x-color-black)\"\\n  }\\n}}%%\\ngraph LR\\n  subgraph Tabelle [Tabellenseite]\\n    A[Neu klicken] --> B[Detailseite öffnen]\\n  end\\n\\n  subgraph Detail [Detailseite]\\n    B --> C[Formular ausfüllen]\\n    C --> D[Speichern]\\n  end\\n\\n  D --> E[Zurück zur Tabelle]\\n\\n  subgraph Tabelle2 [Tabellenseite]\\n    E\\n  end"}]
+9:["$","div",null,{"className":"nextra-steps x:ms-4 x:mb-12 x:border-s x:border-gray-200 x:ps-6 x:dark:border-neutral-800","style":{"--counter-id":"_S_1_"},"children":[["$","h3",null,{"id":"create-business-object","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Create Business Object",["$","$Lb",null,{"id":"create-business-object"}]]}],["$","$Ld",null,{"items":["Preview","Description","Links"],"children":[["$","$Le",null,{"children":[["$","h3",null,{"id":"preview","style":{"visibility":"hidden","width":0,"height":0},"children":"Preview"}],["$","$Lf",null,{"src":"/assets/test/Shell.png","alt":"Demo image","title":"Demo-Bild","description":"Kurzer erklärender Text zur Abbildung.","thumbWidth":800,"thumbStyle":{"marginTop":8},"lightboxPaddingY":72}]]}],["$","$Le",null,{"children":[["$","h3",null,{"id":"description","style":{"visibility":"hidden","width":0,"height":0},"children":"Description"}],"Some description"]}],["$","$Le",null,{"children":[["$","h3",null,{"id":"links","style":{"visibility":"hidden","width":0,"height":0},"children":"Links"}],"wefgqewfqweq ew qew rqew"]}]]}],["$","h3",null,{"id":"install-the-docs-theme","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Install the docs theme",["$","$Lb",null,{"id":"install-the-docs-theme"}]]}],["$","$Ld",null,{"items":["Preview","Description","Links"],"children":[["$","$Le",null,{"children":[["$","h3",null,{"id":"preview-1","style":{"visibility":"hidden","width":0,"height":0},"children":"Preview"}],["$","$Lf",null,{"src":"/assets/test/Shell.png","alt":"Demo image","title":"Demo-Bild","description":"Kurzer erklärender Text zur Abbildung.","thumbWidth":800,"thumbStyle":{"marginTop":8},"lightboxPaddingY":72}]]}],["$","$Le",null,{"children":[["$","h3",null,{"id":"description-1","style":{"visibility":"hidden","width":0,"height":0},"children":"Description"}],"Some description"]}],["$","$Le",null,{"children":[["$","h3",null,{"id":"links-1","style":{"visibility":"hidden","width":0,"height":0},"children":"Links"}],"wefgqewfqweq ew qew rqew"]}]]}]]}]
+a:["$","$L10",null,{"children":["$","$11",null,{"name":"Next.MetadataOutlet","children":"$@12"}]}]
+12:null
