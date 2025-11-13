@@ -27,7 +27,7 @@ This repository contains the documentation and UX guidelines for Quadrel, built 
 
 ## Setup
 
-To set up the project locally:
+To set up the project locally, you need [Node.js](https://nodejs.org/en/download/) (version 20 or higher) installed.
 
 1.  **Clone the repository:**
 
@@ -37,6 +37,8 @@ To set up the project locally:
     ```
 
 2.  **Install dependencies:**
+
+    This project uses Next.js, Nextra, and other dependencies. They will be installed automatically with the following command:
 
     ```bash
     npm install
@@ -67,54 +69,5 @@ This project is configured to be deployed to GitHub Pages using a GitHub Actions
 ### Environment Variables
 
 - `BASE_PATH`: Set this environment variable in your deployment pipeline to the repository name (e.g., `/docs-ux`) if deploying to `https://<username>.github.io/<repository-name>/`. If deploying to a custom domain at the root, leave it empty.
-
-### GitHub Actions Workflow (Example)
-
-An example workflow for GitHub Pages deployment might look like this (usually located in `.github/workflows/deploy.yml`):
-
-```yaml
-name: Deploy to GitHub Pages
-
-on:
-  push:
-    branches: [main]
-
-jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Set BASE_PATH for GitHub Pages
-        run: echo "BASE_PATH=/docs-ux" >> $GITHUB_ENV
-        # Adjust /docs-ux to your repository name if different
-
-      - name: Build project
-        run: npm run build
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./out # Next.js static export output directory
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-        # Optional: Specify your custom domain if applicable
-        # with:
-        #   token: ${{ secrets.GITHUB_TOKEN }}
-        #   url: https://your-custom-domain.com
-
-```
 
 **Note**: Ensure your GitHub Pages settings in your repository are configured to deploy from the `gh-pages` branch or the `docs` folder, depending on your `actions/deploy-pages` setup.
