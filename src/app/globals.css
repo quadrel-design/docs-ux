@@ -1,16 +1,3 @@
-/* Make the whole page span full width by removing wrapper constraints */
-body[data-layout="full"] main .x\:max-w-\(--nextra-content-width\),
-body[data-layout="full"] .nextra-content .x\:max-w-\(--nextra-content-width\),
-body[data-layout="full"] article .x\:max-w-\(--nextra-content-width\) {
-  max-width: none;
-}
-body[data-layout="full"] main .x\:mx-auto,
-body[data-layout="full"] .nextra-content .x\:mx-auto,
-body[data-layout="full"] article .x\:mx-auto {
-  margin-left: 0;
-  margin-right: 0;
-}
-
 /* Hide theme switcher globally - target button and its parent container */
 .nextra-container div[class*="x:gap-2"][class*="x:py-2"][class*="x:px-4"]:has(button[title="Change theme"]) {
   display: none !important;
