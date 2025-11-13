@@ -1,12 +1,12 @@
 /* Make the whole page span full width by removing wrapper constraints */
-main .x\:max-w-\(--nextra-content-width\),
-.nextra-content .x\:max-w-\(--nextra-content-width\),
-article .x\:max-w-\(--nextra-content-width\) {
+body[data-layout="full"] main .x\:max-w-\(--nextra-content-width\),
+body[data-layout="full"] .nextra-content .x\:max-w-\(--nextra-content-width\),
+body[data-layout="full"] article .x\:max-w-\(--nextra-content-width\) {
   max-width: none;
 }
-main .x\:mx-auto,
-.nextra-content .x\:mx-auto,
-article .x\:mx-auto {
+body[data-layout="full"] main .x\:mx-auto,
+body[data-layout="full"] .nextra-content .x\:mx-auto,
+body[data-layout="full"] article .x\:mx-auto {
   margin-left: 0;
   margin-right: 0;
 }
