@@ -1,10 +1,5 @@
 /* Nextra Theme Overrides */
 
-/* Hide Nextra Navbar when navbar is explicitly false */
-.nextra-navbar {
-  display: none !important;
-}
-
 /* Navbar and Footer Padding */
 /* Increase specificity by targeting the nav element more specifically */
 .nextra-navbar > nav,
