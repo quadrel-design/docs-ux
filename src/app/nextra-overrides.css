@@ -1,18 +1,7 @@
 /* Nextra Theme Overrides */
 
 /* Navbar and Footer Padding */
-/* Increase specificity by targeting the nav element more specifically */
-.nextra-navbar > nav,
-.nextra-navbar nav[role="navigation"] {
-  padding-left: var(--q-spacing-base);
-  padding-right: var(--q-spacing-base);
-}
-/* Target footer more specifically */
-body > footer,
-.nextra-container > footer {
-  padding-left: var(--q-spacing-base);
-  padding-right: var(--q-spacing-base);
-}
+
 
 /* Sidebar Navigation Styles */
 /* Active item in left navigation: black background + white text */
