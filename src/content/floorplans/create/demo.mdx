@@ -18,7 +18,7 @@ import { Tabs } from 'nextra/components'
 
 ## Create an initial Business Object
 
-The create flow defines a standardized, step-based process for initially creating a new business object from a table-based overview page. It starts with a dedicated entry action on the overview (e.g. “New Business Object”), opens a multi-step wizard with a fixed, non-dynamic step sequence, and enforces functional validation on each step before progress or submission is allowed. A cancel dialog ensures that premature termination is always explicit and that the user is returned in a controlled way to the overview. After a successful submit, the new business object is persisted, the system navigates back to the table, and a non-blocking success snackbar confirms completion of the create process.
+Standardized process for creating a new business object within a static, linear stepper, initiated from the table-based overview page.
 
 ## Flow Diagram
 
@@ -101,14 +101,33 @@ Before moving to the next step or performing the final submit, all mandatory fie
   <Tabs.Tab>wefgqewfqweq ew qew rqew</Tabs.Tab>
 </Tabs>
 
-### Return to Overview Page (Success Message)
+### Creation of the Business Object
 
-After a successful submit, the new business object is persistently created and the application navigates back to the table overview page. The newly created object is available in the table, and a snackbar indicates the successful completion of the create process without blocking the further workflow.
+Once all steps have been completed successfully and the final submit action is triggered, the business object is created and persisted. No partial or intermediate objects are stored beforehand; creation only happens after all required data across all steps is complete and valid.
 
 <Tabs items={['Preview', 'Description', 'Links']}>
   <Tabs.Tab>
 <QuadrelLightbox
       src="/assets/floorplans/create/default/uc-create-default-05.svg"
+      alt="Create default flow"
+      title="Demo-Bild"
+      description="Kurzer erklärender Text zur Abbildung."
+      thumbStyle={{ width: '100%', marginTop: 8 }}
+      lightboxPaddingY={72}
+    />
+  </Tabs.Tab>
+  <Tabs.Tab>Some description</Tabs.Tab>
+  <Tabs.Tab>wefgqewfqweq ew qew rqew</Tabs.Tab>
+</Tabs>
+
+### Return to Overview Page (Success Message)
+
+After successful creation, the application navigates back to the table overview page. The newly created object is available in the table, and a snackbar indicates the successful completion of the create process without blocking the further workflow.
+
+<Tabs items={['Preview', 'Description', 'Links']}>
+  <Tabs.Tab>
+<QuadrelLightbox
+      src="/assets/floorplans/create/default/uc-create-default-06.svg"
       alt="Create default flow"
       title="Demo-Bild"
       description="Kurzer erklärender Text zur Abbildung."
