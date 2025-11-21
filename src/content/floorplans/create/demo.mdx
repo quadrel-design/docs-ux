@@ -13,7 +13,6 @@ export const metadata = {
 import { Steps } from 'nextra/components'
 import { Tabs } from 'nextra/components'
 
-
 # Floorplan - Create
 
 ## Create an initial Business Object
@@ -29,8 +28,6 @@ Standardized process for creating a new business object within a static, linear 
 
 The overview page displays all existing business objects in a table and serves as the entry point for the create flow. The primary action “Create / New Business Object” starts the creation process; this action is placed consistently and is clearly identified as the trigger for initial creation.
 
-<Tabs items={['Preview', 'Description', 'Links']}>
-  <Tabs.Tab>
     <QuadrelLightbox
       src="/assets/floorplans/create/default/uc-create-default-01.svg"
       alt="Create default flow"
@@ -39,17 +36,11 @@ The overview page displays all existing business objects in a table and serves a
       thumbStyle={{ width: '100%', marginTop: 8 }}
       lightboxPaddingY={72}
     />
-  </Tabs.Tab>
-  <Tabs.Tab>Some description</Tabs.Tab>
-  <Tabs.Tab>wefgqewfqweq ew qew rqew</Tabs.Tab>
-</Tabs>
 
 ### Detail Page with Stepper
 
 The detail page opens a multi-step staic wizard in which input fields are grouped by step according to functional logic. The order of steps is defined in a fixed manner and represents the standardized create process for this business object.
 
-<Tabs items={['Preview', 'Description', 'Links']}>
-  <Tabs.Tab>
 <QuadrelLightbox
       src="/assets/floorplans/create/default/uc-create-default-02.svg"
       alt="Create default flow"
@@ -58,17 +49,12 @@ The detail page opens a multi-step staic wizard in which input fields are groupe
       thumbStyle={{ width: '100%', marginTop: 8 }}
       lightboxPaddingY={72}
     />
-  </Tabs.Tab>
-  <Tabs.Tab>Some description</Tabs.Tab>
-  <Tabs.Tab>wefgqewfqweq ew qew rqew</Tabs.Tab>
-</Tabs>
+
 
 ### Cancel Dialog
 
 When the cancel action is triggered in the wizard, a confirmation dialog is displayed, announcing that all data entered so far will be discarded. The dialog ensures that the create process is only canceled intentionally and, if confirmed, redirects back to the overview page.
 
-<Tabs items={['Preview', 'Description', 'Links']}>
-  <Tabs.Tab>
 <QuadrelLightbox
       src="/assets/floorplans/create/default/uc-create-default-03.svg"
       alt="Create default flow"
@@ -77,17 +63,11 @@ When the cancel action is triggered in the wizard, a confirmation dialog is disp
       thumbStyle={{ width: '100%', marginTop: 8 }}
       lightboxPaddingY={72}
     />
-  </Tabs.Tab>
-  <Tabs.Tab>Some description</Tabs.Tab>
-  <Tabs.Tab>wefgqewfqweq ew qew rqew</Tabs.Tab>
-</Tabs>
 
 ### Validation and Progress
 
 Before moving to the next step or performing the final submit, all mandatory fields of the current step are validated. As long as required fields are missing or invalid, the navigation (Next/Submit) remains disabled; error states are shown directly on the affected fields and make the functional validation rules visible.
 
-<Tabs items={['Preview', 'Description', 'Links']}>
-  <Tabs.Tab>
 <QuadrelLightbox
       src="/assets/floorplans/create/default/uc-create-default-04.svg"
       alt="Create default flow"
@@ -96,17 +76,11 @@ Before moving to the next step or performing the final submit, all mandatory fie
       thumbStyle={{ width: '100%', marginTop: 8 }}
       lightboxPaddingY={72}
     />
-  </Tabs.Tab>
-  <Tabs.Tab>Some description</Tabs.Tab>
-  <Tabs.Tab>wefgqewfqweq ew qew rqew</Tabs.Tab>
-</Tabs>
 
 ### Creation of the Business Object
 
 Once all steps have been completed successfully and the final submit action is triggered, the business object is created and persisted. No partial or intermediate objects are stored beforehand; creation only happens after all required data across all steps is complete and valid.
 
-<Tabs items={['Preview', 'Description', 'Links']}>
-  <Tabs.Tab>
 <QuadrelLightbox
       src="/assets/floorplans/create/default/uc-create-default-05.svg"
       alt="Create default flow"
@@ -115,17 +89,11 @@ Once all steps have been completed successfully and the final submit action is t
       thumbStyle={{ width: '100%', marginTop: 8 }}
       lightboxPaddingY={72}
     />
-  </Tabs.Tab>
-  <Tabs.Tab>Some description</Tabs.Tab>
-  <Tabs.Tab>wefgqewfqweq ew qew rqew</Tabs.Tab>
-</Tabs>
 
 ### Return to Overview Page (Success Message)
 
 After successful creation, the application navigates back to the table overview page. The newly created object is available in the table, and a snackbar indicates the successful completion of the create process without blocking the further workflow.
 
-<Tabs items={['Preview', 'Description', 'Links']}>
-  <Tabs.Tab>
 <QuadrelLightbox
       src="/assets/floorplans/create/default/uc-create-default-06.svg"
       alt="Create default flow"
@@ -134,10 +102,5 @@ After successful creation, the application navigates back to the table overview 
       thumbStyle={{ width: '100%', marginTop: 8 }}
       lightboxPaddingY={72}
     />
-  </Tabs.Tab>
-  <Tabs.Tab>Some description</Tabs.Tab>
-  <Tabs.Tab>wefgqewfqweq ew qew rqew</Tabs.Tab>
-</Tabs>
-
 </Steps>
 
