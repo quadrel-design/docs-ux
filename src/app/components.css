@@ -35,3 +35,15 @@
 .q-link:hover {
   color: var(--x-color-primary-700);
 }
+
+/* Storybook link: underline only on hover */
+.q-sblink {
+  color: var(--x-color-primary-600);
+  text-decoration: none;
+  transition: color var(--x-default-transition-duration, 200ms) var(--x-default-transition-timing-function, ease),
+              text-decoration var(--x-default-transition-duration, 200ms) var(--x-default-transition-timing-function, ease);
+}
+.q-sblink:hover {
+  text-decoration: underline;
+  color: var(--x-color-primary-700);
+}
