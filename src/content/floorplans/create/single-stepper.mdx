@@ -23,7 +23,7 @@ Standardized process for creating a new business object within a static, linear 
 
 ## Flow Diagram
 
-![Create default flow](/assets/floorplans/create/multi-stepper/uc-create-single-stepper-flow.svg)
+![Create default flow](/assets/floorplans/create/single-stepper/uc-create-single-stepper-flow.svg)
 
 <Steps>
 ### Overview Page with Table
@@ -31,7 +31,7 @@ Standardized process for creating a new business object within a static, linear 
 The overview page displays all existing business objects in a table and serves as the entry point for the create flow. The primary action “Create / New Business Object” starts the creation process; this action is placed consistently and is clearly identified as the trigger for initial creation.
 
     <QuadrelLightbox
-      src="/assets/floorplans/create/multi-stepper/uc-create-single-stepper-01.svg"
+      src="/assets/floorplans/create/single-stepper/uc-create-single-stepper-01.svg"
       alt="Create default flow"
       title="Demo-Bild"
       description="Kurzer erklärender Text zur Abbildung."
@@ -44,7 +44,7 @@ The overview page displays all existing business objects in a table and serves a
 The detail page opens a multi-step staic wizard in which input fields are grouped by step according to functional logic. The order of steps is defined in a fixed manner and represents the standardized create process for this business object.
 
 <QuadrelLightbox
-      src="/assets/floorplans/create/multi-stepper/uc-create-single-stepper-02.svg"
+      src="/assets/floorplans/create/single-stepper/uc-create-single-stepper-02.svg"
       alt="Create default flow"
       title="Demo-Bild"
       description="Kurzer erklärender Text zur Abbildung."
@@ -58,7 +58,7 @@ The detail page opens a multi-step staic wizard in which input fields are groupe
 When the cancel action is triggered in the wizard, a confirmation dialog is displayed, announcing that all data entered so far will be discarded. The dialog ensures that the create process is only canceled intentionally and, if confirmed, redirects back to the overview page.
 
 <QuadrelLightbox
-      src="/assets/floorplans/create/multi-stepper/uc-create-single-stepper-03.svg"
+      src="/assets/floorplans/create/single-stepper/uc-create-single-stepper-03.svg"
       alt="Create default flow"
       title="Demo-Bild"
       description="Kurzer erklärender Text zur Abbildung."
@@ -71,7 +71,7 @@ When the cancel action is triggered in the wizard, a confirmation dialog is disp
 Before moving to the next step or performing the final submit, all mandatory fields of the current step are validated. As long as required fields are missing or invalid, the navigation (Next/Submit) remains disabled; error states are shown directly on the affected fields and make the functional validation rules visible.
 
 <QuadrelLightbox
-      src="/assets/floorplans/create/multi-stepper/uc-create-single-stepper-04.svg"
+      src="/assets/floorplans/create/single-stepper/uc-create-single-stepper-04.svg"
       alt="Create default flow"
       title="Demo-Bild"
       description="Kurzer erklärender Text zur Abbildung."
@@ -84,7 +84,7 @@ Before moving to the next step or performing the final submit, all mandatory fie
 Once all steps have been completed successfully and the final submit action is triggered, the business object is created and persisted. No partial or intermediate objects are stored beforehand; creation only happens after all required data across all steps is complete and valid.
 
 <QuadrelLightbox
-      src="/assets/floorplans/create/multi-stepper/uc-create-single-stepper-05.svg"
+      src="/assets/floorplans/create/single-stepper/uc-create-single-stepper-05.svg"
       alt="Create default flow"
       title="Demo-Bild"
       description="Kurzer erklärender Text zur Abbildung."
@@ -97,7 +97,7 @@ Once all steps have been completed successfully and the final submit action is t
 After successful creation, the application navigates back to the table overview page. The newly created object is available in the table, and a snackbar indicates the successful completion of the create process without blocking the further workflow.
 
 <QuadrelLightbox
-      src="/assets/floorplans/create/multi-stepper/uc-create-single-stepper-06.svg"
+      src="/assets/floorplans/create/single-stepper/uc-create-single-stepper-06.svg"
       alt="Create default flow"
       title="Demo-Bild"
       description="Kurzer erklärender Text zur Abbildung."
