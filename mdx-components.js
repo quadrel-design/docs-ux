@@ -6,6 +6,25 @@ import QuadrelMermaid from './src/components/QuadrelMermaid'
 
 const docsComponents = getDocsMDXComponents()
 
+function QuadrelWrapper(props) {
+  const { wrapper: ThemeWrapper } = docsComponents
+  const { children, toc, metadata, sourceCode } = props
+  const theme = metadata?.theme || {}
+  const showBackLink = theme.backLink
+  const backHref = theme.backHref
+
+  return (
+    <ThemeWrapper toc={toc} metadata={metadata} sourceCode={sourceCode}>
+      {showBackLink && backHref && (
+        <p>
+          <a href={backHref}>&lt; Back</a>
+        </p>
+      )}
+      {children}
+    </ThemeWrapper>
+  )
+}
+
 export const useMDXComponents = components => ({
   ...docsComponents,
   QuadrelLightbox,
@@ -13,5 +32,6 @@ export const useMDXComponents = components => ({
   QuadrelCard,
   QuadrelCardGrid,
   Mermaid: QuadrelMermaid, // Override default Mermaid component with custom styling
+  wrapper: QuadrelWrapper,
   ...components
 })
