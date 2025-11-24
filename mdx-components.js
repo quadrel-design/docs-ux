@@ -3,27 +3,9 @@ import QuadrelLightbox from './src/components/QuadrelLightbox'
 import QuadrelMasonryGallery from './src/components/QuadrelMasonryGallery'
 import QuadrelCard, { QuadrelCardGrid } from './src/components/QuadrelCard'
 import QuadrelMermaid from './src/components/QuadrelMermaid'
+import QuadrelBack from './src/components/QuadrelBack'
 
 const docsComponents = getDocsMDXComponents()
-
-function QuadrelWrapper(props) {
-  const { wrapper: ThemeWrapper } = docsComponents
-  const { children, toc, metadata, sourceCode } = props
-  const theme = metadata?.theme || {}
-  const showBackLink = theme.backLink
-  const backHref = theme.backHref
-
-  return (
-    <ThemeWrapper toc={toc} metadata={metadata} sourceCode={sourceCode}>
-      {showBackLink && backHref && (
-        <p>
-          <a href={backHref}>&lt; Back</a>
-        </p>
-      )}
-      {children}
-    </ThemeWrapper>
-  )
-}
 
 export const useMDXComponents = components => ({
   ...docsComponents,
@@ -32,6 +14,6 @@ export const useMDXComponents = components => ({
   QuadrelCard,
   QuadrelCardGrid,
   Mermaid: QuadrelMermaid, // Override default Mermaid component with custom styling
-  wrapper: QuadrelWrapper,
+  wrapper: props => <QuadrelBack {...props} ThemeWrapper={docsComponents.wrapper} />,
   ...components
 })
