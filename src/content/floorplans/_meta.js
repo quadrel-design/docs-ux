@@ -1,4 +1,5 @@
 export default {
   index: 'Overview',
-  create: { title: 'Create', display: 'children' }, // hide folder label; show its children only
+  save: { title: 'Save', display: 'children' }, // hide folder label; show its children only
+  inspect: { title: 'Inspect', display: 'children' }, // hide folder label; show its children only
 }
