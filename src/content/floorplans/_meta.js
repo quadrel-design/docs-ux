@@ -1,5 +1,5 @@
 export default {
   index: 'Overview',
-  create: 'Create',
-  inspect: 'Inspect',
+  create: { display: 'children' },
+  inspect: { display: 'children' },
 }
