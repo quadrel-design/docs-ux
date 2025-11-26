@@ -1,5 +1,5 @@
 export default {
-  index: 'Create',            // the link you want
+  index: { display: 'hidden' },
   'multi-stepper': { display: 'hidden' }, // hide all other children
   'single-stepper': { display: 'hidden' } // hide all other children
 }

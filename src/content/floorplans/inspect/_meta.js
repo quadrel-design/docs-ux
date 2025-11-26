@@ -1,5 +1,5 @@
 export default {
-  index: 'Inspect',            // the link you want
+  index: { display: 'hidden' },
   'save': { display: 'hidden' }, // hide all other children
   'submit': { display: 'hidden' } // hide all other children
 }
