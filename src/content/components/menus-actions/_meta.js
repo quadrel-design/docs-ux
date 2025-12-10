@@ -1,4 +1,4 @@
 export default {
-  index: 'Menu and Actions',
+  index: { display: 'hidden' },
   demo: { display: 'hidden' }
 }

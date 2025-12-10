@@ -1,5 +1,5 @@
 export default {
-  index: 'Inspect',
-  'save': { display: 'hidden' }, // hide all other children
-  'submit': { display: 'hidden' } // hide all other children
+  'inspect-index': 'Inspect',
+  'save': { display: 'hidden' },
+  'submit': { display: 'hidden' },
 }

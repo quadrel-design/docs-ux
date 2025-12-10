@@ -1,5 +1,5 @@
 export default {
-  index: 'Create',
-  'multi-stepper': { display: 'hidden' }, // hide all other children
-  'single-stepper': { display: 'hidden' } // hide all other children
+  'create-index': 'Create',
+  'multi-stepper': { display: 'hidden' },
+  'single-stepper': { display: 'hidden' },
 }

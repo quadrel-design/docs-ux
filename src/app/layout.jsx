@@ -42,10 +42,10 @@ export default async function RootLayout({ children }) {
   const navbar = (
     <Navbar
       logo={
-      <a href="/" style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+      <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
         <img src={`${basePath}/assets/admin/logo.svg`} alt="Logo" style={{ height: 24, width: 'auto' }} />
         <span style={{ opacity: '60%' }}> </span>
-      </a>
+      </span>
       }
       // Next.js discord server
       chatLink="https://discord.gg/hEM84NMkRv"
