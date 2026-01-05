@@ -72,12 +72,12 @@
 }
 
 /* Content link styling (MDX): blue, underline on hover */
-.nextra-container article a[href]:not(.subheading-anchor):not(.q-sblink),
-.nextra-container article a[href]:visited:not(.subheading-anchor):not(.q-sblink) {
+main article a[href]:not(.subheading-anchor):not(.q-sblink),
+main article a[href]:visited:not(.subheading-anchor):not(.q-sblink) {
   color: var(--x-color-primary-600);
   text-decoration: none;
 }
-.nextra-container article a[href]:hover:not(.subheading-anchor):not(.q-sblink) {
+main article a[href]:hover:not(.subheading-anchor):not(.q-sblink) {
   color: var(--x-color-primary-700);
   text-decoration: underline;
 }
