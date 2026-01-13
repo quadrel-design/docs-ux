@@ -17,7 +17,7 @@ export default function QuadrelFigmaLink({
       target="_blank"
       rel="noopener noreferrer"
       style={{
-        display: 'inline-flex',
+        display: 'flex',
         alignItems: 'center',
         gap: 8,
         marginTop: mt,
