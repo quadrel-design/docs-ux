@@ -5,7 +5,6 @@ export default {
   components: 'Components',
   patterns: 'Patterns',
   shell: 'Shell',
-  compositions: 'Compositions',
   'dos-and-donts': 'Dos and Donts',
   tools: 'Tools',
 }
