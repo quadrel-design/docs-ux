@@ -1,5 +1,5 @@
 export default {
-  quadrel: 'Quadrel in a nutshell',
+  nutshell: 'Quadrel in a nutshell',
+  portfolio: 'Quadrel Product and Tools',
   'quadrel-ux': 'UX Architecture',
-
 }
