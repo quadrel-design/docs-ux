@@ -1,0 +1,44 @@
+1:"$Sreact.fragment"
+2:I[55169,["/docs-ux/_next/static/chunks/69d6470f6a456a18.js","/docs-ux/_next/static/chunks/ed53e381356371e4.js","/docs-ux/_next/static/chunks/dafbbb73d7f33f22.js","/docs-ux/_next/static/chunks/d87e0fc9f6e11c56.js"],"TOCProvider"]
+3:I[769,["/docs-ux/_next/static/chunks/69d6470f6a456a18.js","/docs-ux/_next/static/chunks/ed53e381356371e4.js","/docs-ux/_next/static/chunks/dafbbb73d7f33f22.js","/docs-ux/_next/static/chunks/d87e0fc9f6e11c56.js"],"Sidebar"]
+4:I[47486,["/docs-ux/_next/static/chunks/69d6470f6a456a18.js","/docs-ux/_next/static/chunks/ed53e381356371e4.js","/docs-ux/_next/static/chunks/dafbbb73d7f33f22.js","/docs-ux/_next/static/chunks/d87e0fc9f6e11c56.js"],"ClientWrapper"]
+6:I[63894,["/docs-ux/_next/static/chunks/69d6470f6a456a18.js","/docs-ux/_next/static/chunks/ed53e381356371e4.js","/docs-ux/_next/static/chunks/dafbbb73d7f33f22.js","/docs-ux/_next/static/chunks/d87e0fc9f6e11c56.js"],"HeadingAnchor"]
+7:I[27984,["/docs-ux/_next/static/chunks/69d6470f6a456a18.js","/docs-ux/_next/static/chunks/ed53e381356371e4.js","/docs-ux/_next/static/chunks/dafbbb73d7f33f22.js","/docs-ux/_next/static/chunks/d87e0fc9f6e11c56.js"],"default"]
+9:I[97367,["/docs-ux/_next/static/chunks/ff1a16fafef87110.js","/docs-ux/_next/static/chunks/64c0a5e3a0354479.js"],"OutletBoundary"]
+a:"$Sreact.suspense"
+5:T471,# Quadrel UX-Architecture
+
+The Quadrel UI is built as an integrated low-code design system based on a UX architecture.
+Its foundation is the Quadrel Layout System (QLS), which provides essential templates to 
+implement recurring processes within applications consistently and efficiently.
+<br />
+
+The templates are structured from the outside in and define the central placeholders 
+through which content (patterns / components) is consistently integrated and arranged.
+
+
+## QLS Overview
+
+The Overview : Template typically represents an application's overview page.
+
+<QuadrelLightbox
+      src="/assets/introduction/qd-qls-overview.png"
+      alt="QLS Overview"
+      title="Template : Overview"
+      thumbStyle={{ width: '100%', marginTop: 8, padding: 16 }}
+      lightboxPaddingY={72}
+    />
+
+## QLS Detail
+
+The Detail layout typically represents an application's detail page, with integrated back navigation.
+
+<QuadrelLightbox
+      src="/assets/introduction/qd-qls-detail.png"
+      alt="QLS Overview"
+      title="Template : Detail"
+      thumbStyle={{ width: '100%', marginTop: 8, padding: 16 }}
+      lightboxPaddingY={72}
+    />0:{"buildId":"NusN2qB4cHARZKUCVo_c5","rsc":["$","$1","c",{"children":[["$","div",null,{"className":"x:mx-auto x:flex x:max-w-(--nextra-content-width)","children":["$","$L2",null,{"value":[{"value":"QLS Overview","id":"qls-overview","depth":2},{"value":"QLS Detail","id":"qls-detail","depth":2}],"children":[["$","$L3",null,{}],["$","$L4",null,{"metadata":{"title":"Quadrel UX-Architecture","filePath":"src/content/introduction/quadrel-ux.mdx","timestamp":1763042739000},"sourceCode":"$5","children":[["$","div",null,{"id":"nextra-skip-nav"}],["$","main",null,{"data-pagefind-body":true,"children":["$undefined",[["$","h1",null,{"className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-bold x:mt-2 x:text-4xl","children":["Quadrel UX-Architecture","$undefined"]}],"\n",["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":"The Quadrel UI is built as an integrated low-code design system based on a UX architecture.\nIts foundation is the Quadrel Layout System (QLS), which provides essential templates to\nimplement recurring processes within applications consistently and efficiently."}],"\n",["$","br",null,{}],"\n",["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":"The templates are structured from the outside in and define the central placeholders\nthrough which content (patterns / components) is consistently integrated and arranged."}],"\n",["$","h2",null,{"id":"qls-overview","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["QLS Overview",["$","$L6",null,{"id":"qls-overview"}]]}],"\n",["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":"The Overview : Template typically represents an application’s overview page."}],"\n",["$","$L7",null,{"src":"/assets/introduction/qd-qls-overview.png","alt":"QLS Overview","title":"Template : Overview","thumbStyle":{"width":"100%","marginTop":8,"padding":16},"lightboxPaddingY":72}],"\n",["$","h2",null,{"id":"qls-detail","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["QLS Detail",["$","$L6",null,{"id":"qls-detail"}]]}],"\n",["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":"The Detail layout typically represents an application’s detail page, with integrated back navigation."}],"\n",["$","$L7",null,{"src":"/assets/introduction/qd-qls-detail.png","alt":"QLS Overview","title":"Template : Detail","thumbStyle":{"width":"100%","marginTop":8,"padding":16},"lightboxPaddingY":72}]]]}]]}]]}]}],null,"$L8"]}],"loading":null,"isPartial":false}
+8:["$","$L9",null,{"children":["$","$a",null,{"name":"Next.MetadataOutlet","children":"$@b"}]}]
+b:null

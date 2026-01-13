@@ -1,0 +1,145 @@
+1:"$Sreact.fragment"
+2:I[55169,["/docs-ux/_next/static/chunks/69d6470f6a456a18.js","/docs-ux/_next/static/chunks/ed53e381356371e4.js","/docs-ux/_next/static/chunks/dafbbb73d7f33f22.js","/docs-ux/_next/static/chunks/d87e0fc9f6e11c56.js"],"TOCProvider"]
+3:I[769,["/docs-ux/_next/static/chunks/69d6470f6a456a18.js","/docs-ux/_next/static/chunks/ed53e381356371e4.js","/docs-ux/_next/static/chunks/dafbbb73d7f33f22.js","/docs-ux/_next/static/chunks/d87e0fc9f6e11c56.js"],"Sidebar"]
+4:I[47486,["/docs-ux/_next/static/chunks/69d6470f6a456a18.js","/docs-ux/_next/static/chunks/ed53e381356371e4.js","/docs-ux/_next/static/chunks/dafbbb73d7f33f22.js","/docs-ux/_next/static/chunks/d87e0fc9f6e11c56.js"],"ClientWrapper"]
+9:I[22016,["/docs-ux/_next/static/chunks/69d6470f6a456a18.js","/docs-ux/_next/static/chunks/ed53e381356371e4.js","/docs-ux/_next/static/chunks/dafbbb73d7f33f22.js","/docs-ux/_next/static/chunks/d87e0fc9f6e11c56.js"],""]
+a:I[63894,["/docs-ux/_next/static/chunks/69d6470f6a456a18.js","/docs-ux/_next/static/chunks/ed53e381356371e4.js","/docs-ux/_next/static/chunks/dafbbb73d7f33f22.js","/docs-ux/_next/static/chunks/d87e0fc9f6e11c56.js"],"HeadingAnchor"]
+b:I[27984,["/docs-ux/_next/static/chunks/69d6470f6a456a18.js","/docs-ux/_next/static/chunks/ed53e381356371e4.js","/docs-ux/_next/static/chunks/dafbbb73d7f33f22.js","/docs-ux/_next/static/chunks/d87e0fc9f6e11c56.js"],"default"]
+19:I[97367,["/docs-ux/_next/static/chunks/ff1a16fafef87110.js","/docs-ux/_next/static/chunks/64c0a5e3a0354479.js"],"OutletBoundary"]
+1a:"$Sreact.suspense"
+:HL["/docs-ux/assets/admin/logo-storybook.svg","image"]
+:HL["/docs-ux/assets/admin/figma-icon.svg","image"]
+5:T1275,export const metadata = {
+  title: 'Floorplan / Create / Multi-Stepper',
+  theme: {
+    layout: 'full',
+    navbar: false,
+    backLink: true,
+    backHref: '/floorplans/create/create-index',
+    sidebar: false,
+    toc: true,
+    breadcrumb: false,
+    pagination: true,
+    copyPage: true
+  }
+}
+
+import { Steps } from 'nextra/components'
+import { Tabs } from 'nextra/components'
+
+# Floorplan - Create (Multi-Stepper)
+
+## Create an initial Business Object
+
+Standardized process for creating a new business object within a static, linear stepper, initiated from the table-based overview page.
+
+## Flow Diagram
+
+<QuadrelLightbox
+      src="/assets/floorplans/create/multi-stepper/uc-create-multi-stepper-flow.svg"
+      alt="Create default flow"
+      title="Flow : Create (Multi-Step)"
+      thumbStyle={{ width: '100%', marginTop: 8, padding: 16 }}
+      lightboxPaddingY={72}
+    />
+
+<Steps>
+### Overview Page with Table
+
+The overview page displays all existing business objects in a table and serves as the entry point for the create flow. The primary action “Create / New Business Object” starts the creation process; this action is placed consistently and is clearly identified as the trigger for initial creation.
+
+<QuadrelSbLink href="https://quadrel-dev.nivel.bazg.admin.ch/storybook/?path=/story/layout-qls-shell--shell-inspect" marginTop={8} marginBottom={8}>
+    View Quadrel Shell Overview
+</QuadrelSbLink>
+<QuadrelFigmaLink href="https://www.figma.com/design/yz5EN9PLpzHMd5bHsC1oS8/Quadrel-UI-Kit?node-id=5918-4716&t=QHdUgkqXMyEpgen9-0" marginTop={8} marginBottom={8}>
+    View Quadrel Shell Design
+</QuadrelFigmaLink>
+
+    <QuadrelLightbox
+      src="/assets/floorplans/create/multi-stepper/uc-create-multi-stepper-01.svg"
+      alt="Create default flow"
+      title="Start Create"
+      thumbStyle={{ width: '100%', marginTop: 8 }}
+      lightboxPaddingY={72}
+    />
+  
+
+### Detail Page with Stepper
+
+The detail page opens a multi-step staic wizard in which input fields are grouped by step according to functional logic. The order of steps is defined in a fixed manner and represents the standardized create process for this business object.
+
+<QuadrelLightbox
+      src="/assets/floorplans/create/multi-stepper/uc-create-multi-stepper-02.svg"
+      alt="Start Wizard"
+      title="Demo-Bild"
+      thumbStyle={{ width: '100%', marginTop: 8 }}
+      lightboxPaddingY={72}
+    />
+
+
+### Cancel Dialog
+
+When the cancel action is triggered in the wizard, a confirmation dialog is displayed, announcing that all data entered so far will be discarded. The dialog ensures that the create process is only canceled intentionally and, if confirmed, redirects back to the overview page.
+
+<QuadrelLightbox
+      src="/assets/floorplans/create/multi-stepper/uc-create-multi-stepper-03.svg"
+      alt="Create default flow"
+      title="Cancel Data Input"
+      thumbStyle={{ width: '100%', marginTop: 8 }}
+      lightboxPaddingY={72}
+    />
+
+### Validation and Progress
+
+Before moving to the next step or performing the final submit, all mandatory fields of the current step are validated. As long as required fields are missing or invalid, the navigation (Next/Submit) remains disabled; error states are shown directly on the affected fields and make the functional validation rules visible.
+
+<QuadrelLightbox
+      src="/assets/floorplans/create/multi-stepper/uc-create-multi-stepper-04.svg"
+      alt="Create default flow"
+      title="Final Submit"
+      thumbStyle={{ width: '100%', marginTop: 8 }}
+      lightboxPaddingY={72}
+    />
+
+### Creation of the Business Object
+
+Once all steps have been completed successfully and the final submit action is triggered, the business object is created and persisted. No partial or intermediate objects are stored beforehand; creation only happens after all required data across all steps is complete and valid.
+
+<QuadrelLightbox
+      src="/assets/floorplans/create/multi-stepper/uc-create-multi-stepper-05.svg"
+      alt="Create default flow"
+      title="Create Business Object"
+      description="Kurzer erklärender Text zur Abbildung."
+      thumbStyle={{ width: '100%', marginTop: 8 }}
+      lightboxPaddingY={72}
+    />
+
+### Return to Overview Page (Success Message)
+
+After successful creation, the application navigates back to the table overview page. The newly created object is available in the table, and a snackbar indicates the successful completion of the create process without blocking the further workflow.
+
+<QuadrelLightbox
+      src="/assets/floorplans/create/multi-stepper/uc-create-multi-stepper-06.svg"
+      alt="Create default flow"
+      title="Success"
+      thumbStyle={{ width: '100%', marginTop: 8 }}
+      lightboxPaddingY={72}
+    />
+</Steps>0:{"buildId":"NusN2qB4cHARZKUCVo_c5","rsc":["$","$1","c",{"children":[["$","div",null,{"className":"x:mx-auto x:flex x:max-w-(--nextra-content-width)","children":["$","$L2",null,{"value":[{"value":"Create an initial Business Object","id":"create-an-initial-business-object","depth":2},{"value":"Flow Diagram","id":"flow-diagram","depth":2},{"value":"Overview Page with Table","id":"overview-page-with-table","depth":3},{"value":"Detail Page with Stepper","id":"detail-page-with-stepper","depth":3},{"value":"Cancel Dialog","id":"cancel-dialog","depth":3},{"value":"Validation and Progress","id":"validation-and-progress","depth":3},{"value":"Creation of the Business Object","id":"creation-of-the-business-object","depth":3},{"value":"Return to Overview Page (Success Message)","id":"return-to-overview-page-success-message","depth":3}],"children":[["$","$L3",null,{}],["$","$L4",null,{"metadata":{"title":"Floorplan / Create / Multi-Stepper","theme":{"layout":"full","navbar":false,"backLink":true,"backHref":"/floorplans/create/create-index","sidebar":false,"toc":true,"breadcrumb":false,"pagination":true,"copyPage":true},"filePath":"src/content/floorplans/create/multi-stepper.mdx","timestamp":1763042739000},"sourceCode":"$5","children":["$L6","$L7"]}]]}]}],null,"$L8"]}],"loading":null,"isPartial":false}
+6:["$","div",null,{"id":"nextra-skip-nav"}]
+7:["$","main",null,{"data-pagefind-body":true,"children":[["$","p",null,{"children":["$","$L9",null,{"href":"/floorplans/create/create-index","children":"< Back"}]}],[["$","h1",null,{"className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-bold x:mt-2 x:text-4xl","children":["Floorplan - Create (Multi-Stepper)","$undefined"]}],"\n",["$","h2",null,{"id":"create-an-initial-business-object","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["Create an initial Business Object",["$","$La",null,{"id":"create-an-initial-business-object"}]]}],"\n",["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":"Standardized process for creating a new business object within a static, linear stepper, initiated from the table-based overview page."}],"\n",["$","h2",null,{"id":"flow-diagram","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["Flow Diagram",["$","$La",null,{"id":"flow-diagram"}]]}],"\n",["$","$Lb",null,{"src":"/assets/floorplans/create/multi-stepper/uc-create-multi-stepper-flow.svg","alt":"Create default flow","title":"Flow : Create (Multi-Step)","thumbStyle":{"width":"100%","marginTop":8,"padding":16},"lightboxPaddingY":72}],"\n",["$","div",null,{"className":"nextra-steps x:ms-4 x:mb-12 x:border-s x:border-gray-200 x:ps-6 x:dark:border-neutral-800","style":{"--counter-id":"_S_1_"},"children":[["$","h3",null,{"id":"overview-page-with-table","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Overview Page with Table",["$","$La",null,{"id":"overview-page-with-table"}]]}],["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":"The overview page displays all existing business objects in a table and serves as the entry point for the create flow. The primary action “Create / New Business Object” starts the creation process; this action is placed consistently and is clearly identified as the trigger for initial creation."}],["$","a",null,{"href":"https://quadrel-dev.nivel.bazg.admin.ch/storybook/?path=/story/layout-qls-shell--shell-inspect","target":"_blank","rel":"noopener noreferrer","style":{"display":"flex","alignItems":"center","gap":8,"marginTop":8,"marginBottom":8},"children":[["$","img",null,{"src":"/docs-ux/assets/admin/logo-storybook.svg","alt":"Storybook","style":{"height":24,"width":"auto"}}],["$","span",null,{"children":["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":"View Quadrel Shell Overview"}]}]]}],["$","a",null,{"href":"https://www.figma.com/design/yz5EN9PLpzHMd5bHsC1oS8/Quadrel-UI-Kit?node-id=5918-4716&t=QHdUgkqXMyEpgen9-0","target":"_blank","rel":"noopener noreferrer","style":{"display":"flex","alignItems":"center","gap":8,"marginTop":8,"marginBottom":8},"children":[["$","img",null,{"src":"/docs-ux/assets/admin/figma-icon.svg","alt":"Figma","style":{"height":24,"width":"auto"}}],["$","span",null,{"children":["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":"View Quadrel Shell Design"}]}]]}],["$","$Lb",null,{"src":"/assets/floorplans/create/multi-stepper/uc-create-multi-stepper-01.svg","alt":"Create default flow","title":"Start Create","thumbStyle":{"width":"100%","marginTop":8},"lightboxPaddingY":72}],["$","h3",null,{"id":"detail-page-with-stepper","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Detail Page with Stepper",["$","$La",null,{"id":"detail-page-with-stepper"}]]}],["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":"The detail page opens a multi-step staic wizard in which input fields are grouped by step according to functional logic. The order of steps is defined in a fixed manner and represents the standardized create process for this business object."}],"$Lc","$Ld","$Le","$Lf","$L10","$L11","$L12","$L13","$L14","$L15","$L16","$L17","$L18"]}]]]}]
+8:["$","$L19",null,{"children":["$","$1a",null,{"name":"Next.MetadataOutlet","children":"$@1b"}]}]
+c:["$","$Lb",null,{"src":"/assets/floorplans/create/multi-stepper/uc-create-multi-stepper-02.svg","alt":"Start Wizard","title":"Demo-Bild","thumbStyle":{"width":"100%","marginTop":8},"lightboxPaddingY":72}]
+d:["$","h3",null,{"id":"cancel-dialog","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Cancel Dialog",["$","$La",null,{"id":"cancel-dialog"}]]}]
+e:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":"When the cancel action is triggered in the wizard, a confirmation dialog is displayed, announcing that all data entered so far will be discarded. The dialog ensures that the create process is only canceled intentionally and, if confirmed, redirects back to the overview page."}]
+f:["$","$Lb",null,{"src":"/assets/floorplans/create/multi-stepper/uc-create-multi-stepper-03.svg","alt":"Create default flow","title":"Cancel Data Input","thumbStyle":{"width":"100%","marginTop":8},"lightboxPaddingY":72}]
+10:["$","h3",null,{"id":"validation-and-progress","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Validation and Progress",["$","$La",null,{"id":"validation-and-progress"}]]}]
+11:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":"Before moving to the next step or performing the final submit, all mandatory fields of the current step are validated. As long as required fields are missing or invalid, the navigation (Next/Submit) remains disabled; error states are shown directly on the affected fields and make the functional validation rules visible."}]
+12:["$","$Lb",null,{"src":"/assets/floorplans/create/multi-stepper/uc-create-multi-stepper-04.svg","alt":"Create default flow","title":"Final Submit","thumbStyle":{"width":"100%","marginTop":8},"lightboxPaddingY":72}]
+13:["$","h3",null,{"id":"creation-of-the-business-object","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Creation of the Business Object",["$","$La",null,{"id":"creation-of-the-business-object"}]]}]
+14:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":"Once all steps have been completed successfully and the final submit action is triggered, the business object is created and persisted. No partial or intermediate objects are stored beforehand; creation only happens after all required data across all steps is complete and valid."}]
+15:["$","$Lb",null,{"src":"/assets/floorplans/create/multi-stepper/uc-create-multi-stepper-05.svg","alt":"Create default flow","title":"Create Business Object","description":"Kurzer erklärender Text zur Abbildung.","thumbStyle":{"width":"100%","marginTop":8},"lightboxPaddingY":72}]
+16:["$","h3",null,{"id":"return-to-overview-page-success-message","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Return to Overview Page (Success Message)",["$","$La",null,{"id":"return-to-overview-page-success-message"}]]}]
+17:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":"After successful creation, the application navigates back to the table overview page. The newly created object is available in the table, and a snackbar indicates the successful completion of the create process without blocking the further workflow."}]
+18:["$","$Lb",null,{"src":"/assets/floorplans/create/multi-stepper/uc-create-multi-stepper-06.svg","alt":"Create default flow","title":"Success","thumbStyle":{"width":"100%","marginTop":8},"lightboxPaddingY":72}]
+1b:null
