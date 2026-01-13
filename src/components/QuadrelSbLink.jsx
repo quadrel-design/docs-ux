@@ -13,7 +13,6 @@ export default function QuadrelSbLink({
 
   return (
     <a
-      className="q-sblink"
       href={targetHref}
       target="_blank"
       rel="noopener noreferrer"
